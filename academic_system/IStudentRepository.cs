@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace academic_system
+{
+    public interface IStudentRepository
+    {
+        Student GetById(int studentId);
+        Student GetByUserId(int userId);
+		List<Student> GetByGroupId(int groupId); //return multiple rows
+		void Add(Student student);
+        void Update(Student student);
+        void Delete(int studentId);
+
+    }
+}

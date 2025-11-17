@@ -1,0 +1,50 @@
+# Build results
+bin/
+obj/
+out/
+
+# NuGet
+packages/
+*.nupkg
+# Prevent NuGet package manager files
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# VS user-specific files
+*.user
+*.userosscache
+*.suo
+*.cache
+*.rsuser
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Rider / JetBrains
+.idea/
+*.DotSettings.user
+
+# ASP.NET specific
+wwwroot/lib/
+
+# ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# Other auto-generated folders
+TestResults/
+.nuget/
