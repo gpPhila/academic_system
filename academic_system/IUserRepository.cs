@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace academic_system
 {
-	public interface IUserRepository
+	public interface IUserRepository : IBaseRepository<User>
 	{
 		User GetByLogin(string login);  
-		void Add(User user);            
-		void Update(User user);         
-		void Delete(int userId);
+		//void Add(User user);            
+		//void Update(User user);         
+		//void Delete(int userId);
 	}
 }
 

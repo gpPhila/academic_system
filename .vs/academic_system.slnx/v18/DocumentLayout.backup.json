@@ -1,25 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\coding\\ginsengtea\\academic_system\\",
+  "WorkspaceRootPath": "D:\\coding\\academic_system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\ginsengtea\\academic_system\\academic_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\ginsengtea\\academic_system\\academic_system\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|D:\\coding\\academic_system\\academic_system\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\ginsengtea\\academic_system\\academic_system\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|D:\\coding\\academic_system\\academic_system\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\ginsengtea\\academic_system\\academic_system\\loginform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|D:\\coding\\academic_system\\academic_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|D:\\coding\\academic_system\\academic_system\\loginform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
       "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\loginform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\ginsengtea\\academic_system\\academic_system\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|D:\\coding\\academic_system\\academic_system\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,28 +34,40 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\coding\\ginsengtea\\academic_system\\academic_system\\Program.cs",
-              "RelativeDocumentMoniker": "academic_system\\Program.cs",
-              "ToolTip": "D:\\coding\\ginsengtea\\academic_system\\academic_system\\Program.cs",
-              "RelativeToolTip": "academic_system\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAaAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "StudentRepository.cs",
+              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\StudentRepository.cs",
+              "RelativeDocumentMoniker": "academic_system\\StudentRepository.cs",
+              "ToolTip": "D:\\coding\\academic_system\\academic_system\\StudentRepository.cs",
+              "RelativeToolTip": "academic_system\\StudentRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T23:02:27.837Z",
+              "WhenOpened": "2025-11-18T10:26:47.391Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\Program.cs",
+              "RelativeDocumentMoniker": "academic_system\\Program.cs",
+              "ToolTip": "D:\\coding\\academic_system\\academic_system\\Program.cs",
+              "RelativeToolTip": "academic_system\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T23:02:27.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "LoginForm.resx",
-              "DocumentMoniker": "D:\\coding\\ginsengtea\\academic_system\\academic_system\\LoginForm.resx",
+              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\LoginForm.resx",
               "RelativeDocumentMoniker": "academic_system\\LoginForm.resx",
-              "ToolTip": "D:\\coding\\ginsengtea\\academic_system\\academic_system\\LoginForm.resx",
+              "ToolTip": "D:\\coding\\academic_system\\academic_system\\LoginForm.resx",
               "RelativeToolTip": "academic_system\\LoginForm.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
               "WhenOpened": "2025-11-17T21:43:20.738Z",
@@ -59,11 +75,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "LoginForm.Designer.cs",
-              "DocumentMoniker": "D:\\coding\\ginsengtea\\academic_system\\academic_system\\LoginForm.Designer.cs",
+              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\LoginForm.Designer.cs",
               "RelativeDocumentMoniker": "academic_system\\LoginForm.Designer.cs",
-              "ToolTip": "D:\\coding\\ginsengtea\\academic_system\\academic_system\\LoginForm.Designer.cs",
+              "ToolTip": "D:\\coding\\academic_system\\academic_system\\LoginForm.Designer.cs",
               "RelativeToolTip": "academic_system\\LoginForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -74,9 +90,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "LoginForm.cs",
-              "DocumentMoniker": "D:\\coding\\ginsengtea\\academic_system\\academic_system\\LoginForm.cs",
+              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\LoginForm.cs",
               "RelativeDocumentMoniker": "academic_system\\LoginForm.cs",
-              "ToolTip": "D:\\coding\\ginsengtea\\academic_system\\academic_system\\LoginForm.cs",
+              "ToolTip": "D:\\coding\\academic_system\\academic_system\\LoginForm.cs",
               "RelativeToolTip": "academic_system\\LoginForm.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -85,11 +101,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "LoginForm.cs [Design]",
-              "DocumentMoniker": "D:\\coding\\ginsengtea\\academic_system\\academic_system\\LoginForm.cs",
+              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\LoginForm.cs",
               "RelativeDocumentMoniker": "academic_system\\LoginForm.cs",
-              "ToolTip": "D:\\coding\\ginsengtea\\academic_system\\academic_system\\LoginForm.cs [Design]",
+              "ToolTip": "D:\\coding\\academic_system\\academic_system\\LoginForm.cs [Design]",
               "RelativeToolTip": "academic_system\\LoginForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-17T21:43:18.094Z",

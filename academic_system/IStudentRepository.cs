@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace academic_system
 {
-    public interface IStudentRepository
+    public interface IStudentRepository : IBaseRepository <Student>
     {
         Student GetById(int studentId);
         Student GetByUserId(int userId);
 		List<Student> GetByGroupId(int groupId); //return multiple rows
-		void Add(Student student);
-        void Update(Student student);
-        void Delete(int studentId);
+		//void Add(Student student);
+        //void Update(Student student);
+        //void Delete(int studentId);
 
     }
 }

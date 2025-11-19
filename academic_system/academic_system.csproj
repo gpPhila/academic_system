@@ -95,10 +95,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs" />
+    <Compile Include="AdminRepository.cs" />
     <Compile Include="Grade.cs" />
     <Compile Include="Group.cs" />
     <Compile Include="GroupOfSubjects.cs" />
+    <Compile Include="IAdminRepository.cs" />
+    <Compile Include="IBaseRepository.cs" />
     <Compile Include="IStudentRepository.cs" />
+    <Compile Include="ISubjectRepository.cs" />
     <Compile Include="ITeacherRepository.cs" />
     <Compile Include="IUserRepository.cs" />
     <Compile Include="DBConnection.cs" />
@@ -113,6 +118,7 @@
     <Compile Include="Student.cs" />
     <Compile Include="StudentRepository.cs" />
     <Compile Include="Subject.cs" />
+    <Compile Include="SubjectRepository.cs" />
     <Compile Include="Teacher.cs" />
     <Compile Include="TeacherRepository.cs" />
     <Compile Include="User.cs" />
