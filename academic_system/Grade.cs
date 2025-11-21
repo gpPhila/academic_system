@@ -12,6 +12,6 @@ namespace academic_system
         public int StudentId { get; set; }
         public int SubjectId { get; set; }
         public int TeacherId { get; set; }
-        public int Value { get; set; }
+        public string Value { get; set; }
     }
 }

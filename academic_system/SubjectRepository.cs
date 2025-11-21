@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
 namespace academic_system
@@ -36,48 +33,73 @@ namespace academic_system
 			}
 			return null;
 		}
-		
-		public List<Student> GetByGroupId(int groupId)
+
+		public List<Subject> GetAll()
 		{
-			List<Student> students = new List<Student>(); //all students belonging to the group in question
+			List <Subject> subjects = new List <Subject> ();
 
 			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
-				string sql = "SELECT * FROM student WHERE group_id=@id";
+				string sql = "SELECT * FROM subject";
 
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
-					cmd.Parameters.AddWithValue("@id", groupId);
-
 					using (var reader = cmd.ExecuteReader())
 					{
 						while (reader.Read())
 						{
-							students.Add(new Student
+							subjects.Add(new Subject
 							{
-								StudentId = Convert.ToInt32(reader["student_id"]),
-								UserId = Convert.ToInt32(reader["user_id"]),
-								GroupId = Convert.ToInt32(reader["group_id"]),
-								FirstName = reader["first_name"].ToString(),
-								LastName = reader["last_name"].ToString()
+								SubjectId = Convert.ToInt32(reader["subject_id"]),
+								TeacherId = Convert.ToInt32(reader["teacher_id"]),
+								Name = reader["name_of_subject"].ToString(),
+								Description = reader["description"].ToString()
 							});
 						}
 					}
 				}
 			}
+		return subjects;
+ 		}
+		public List<Subject> GetByTeacherId(int teacherId)
+		{
+			List<Subject> subjects = new List<Subject>();
 
-			return students;
+			using (var conn = new MySqlConnection(connStr))
+			{
+				conn.Open();
+				string sql = "SELECT * FROM subject WHERE teacher_id=@id";
+
+				using (var cmd = new MySqlCommand(sql, conn))
+				{
+					cmd.Parameters.AddWithValue("@id", teacherId);
+
+					using (var reader = cmd.ExecuteReader())
+					{
+						while (reader.Read())
+						{
+							subjects.Add(new Subject
+							{
+								SubjectId = Convert.ToInt32(reader["subject_id"]),
+								TeacherId = Convert.ToInt32(reader["teacher_id"]),
+								Name = reader["name_of_subject"].ToString(),
+								Description = reader["description"].ToString()
+							});
+						}
+					}
+				}
+			}
+			return subjects;
 		}
 		public void Add(Subject subject)
 		{
 			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
-				string sql = "INSERT INTO subject (subject_id, teacher_id, name_of_subject, description) VALUES (@subjectId, @teacherId, @nameOfSubject, @description)";
+				string sql = "INSERT INTO subject (teacher_id, name_of_subject, description) VALUES (@teacherId, @nameOfSubject, @description)";
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
-					cmd.Parameters.AddWithValue("@subjectId", subject.SubjectId);
 					cmd.Parameters.AddWithValue("@teacherId", subject.TeacherId);
 					cmd.Parameters.AddWithValue("@nameOfSubject", subject.Name);
 					cmd.Parameters.AddWithValue("@description", subject.Description);

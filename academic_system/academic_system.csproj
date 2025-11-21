@@ -97,11 +97,18 @@
   <ItemGroup>
     <Compile Include="Admin.cs" />
     <Compile Include="AdminRepository.cs" />
+    <Compile Include="BaseManager.cs" />
+    <Compile Include="GOSRepository.cs" />
     <Compile Include="Grade.cs" />
+    <Compile Include="GradeRepository.cs" />
     <Compile Include="Group.cs" />
     <Compile Include="GroupOfSubjects.cs" />
+    <Compile Include="GroupRepository.cs" />
     <Compile Include="IAdminRepository.cs" />
     <Compile Include="IBaseRepository.cs" />
+    <Compile Include="IGOSRepository.cs" />
+    <Compile Include="IGradeRepository.cs" />
+    <Compile Include="IGroupRepository.cs" />
     <Compile Include="IStudentRepository.cs" />
     <Compile Include="ISubjectRepository.cs" />
     <Compile Include="ITeacherRepository.cs" />
