@@ -65,6 +65,37 @@ namespace academic_system
 			}
 			return grades;
 		}
+		public List<Grade> GetByTeacherId(int teacherId)
+		{
+			List<Grade> grades = new List<Grade>();
+
+			using (var conn = new MySqlConnection(connStr))
+			{
+				conn.Open();
+				string sql = "SELECT * FROM grade WHERE teacher_id=@id";
+
+				using (var cmd = new MySqlCommand(sql, conn))
+				{
+					cmd.Parameters.AddWithValue("@id", teacherId);
+
+					using (var reader = cmd.ExecuteReader())
+					{
+						while (reader.Read())
+						{
+							grades.Add(new Grade
+							{
+								GradeId = Convert.ToInt32(reader["grade_id"]),
+								StudentId = Convert.ToInt32(reader["student_id"]),
+								SubjectId = Convert.ToInt32(reader["subject_id"]),
+								TeacherId = Convert.ToInt32(reader["teacher_id"]),
+								Value = reader["value"].ToString()
+							});
+						}
+					}
+				}
+			}
+			return grades;
+		}
 		public void Add(Grade grade)
 		{
 			using (var conn = new MySqlConnection(connStr))

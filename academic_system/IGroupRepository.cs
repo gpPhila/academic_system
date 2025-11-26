@@ -9,5 +9,6 @@ namespace academic_system
     public interface IGroupRepository : IBaseRepository<Group>
     {
         Group GetById(int groupId);
-    }
+        List<Group> GetAll();
+	}
 }

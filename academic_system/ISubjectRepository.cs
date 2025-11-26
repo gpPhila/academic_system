@@ -11,5 +11,6 @@ namespace academic_system
         Subject GetById(int subjectId);
 		List<Subject> GetAll();
 		List<Subject> GetByTeacherId(int teacherId);
+		void AssignTeacherToSubject(int subjectId, int teacherId);
 	}
 }

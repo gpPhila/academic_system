@@ -10,6 +10,8 @@ namespace academic_system
     {
         Student GetById(int studentId);
         Student GetByUserId(int userId);
-		List<Student> GetByGroupId(int groupId); //return multiple rows
+		List<Student> GetAll();
+		List<Student> GetByGroupId(int groupId);
+        void AssigntStudentToGroup(int studentId, int groupId);
     }
 }

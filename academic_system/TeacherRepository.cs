@@ -63,6 +63,34 @@ namespace academic_system
 			}
 			return null;
 		}
+		public List<Teacher> GetAll()
+		{
+			List<Teacher> teachers = new List<Teacher>();
+
+			using (var conn = new MySqlConnection(connStr))
+			{
+				conn.Open();
+				string sql = "SELECT * FROM teacher";
+
+				using (var cmd = new MySqlCommand(sql, conn))
+				{
+					using (var reader = cmd.ExecuteReader())
+					{
+						while (reader.Read())
+						{
+							teachers.Add(new Teacher
+							{
+								TeacherId = Convert.ToInt32(reader["teacher_id"]),
+								UserId = Convert.ToInt32(reader["user_id"]),
+								FirstName = reader["first_name"].ToString(),
+								LastName = reader["last_name"].ToString()
+							});
+						}
+					}
+				}
+			}
+			return teachers;
+		}
 		public void Add(Teacher teacher)
 		{
 			using (var conn = new MySqlConnection(connStr))

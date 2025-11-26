@@ -95,8 +95,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.cs" />
-    <Compile Include="AdminRepository.cs" />
     <Compile Include="BaseManager.cs" />
     <Compile Include="GOSRepository.cs" />
     <Compile Include="Grade.cs" />
@@ -104,7 +102,6 @@
     <Compile Include="Group.cs" />
     <Compile Include="GroupOfSubjects.cs" />
     <Compile Include="GroupRepository.cs" />
-    <Compile Include="IAdminRepository.cs" />
     <Compile Include="IBaseRepository.cs" />
     <Compile Include="IGOSRepository.cs" />
     <Compile Include="IGradeRepository.cs" />

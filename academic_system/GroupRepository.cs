@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 
 namespace academic_system
@@ -29,6 +30,32 @@ namespace academic_system
 				}
 			}
 			return null;
+		}
+		public List<Group> GetAll()
+		{
+			List<Group> groups = new List<Group>();
+
+			using (var conn = new MySqlConnection(connStr))
+			{
+				conn.Open();
+				string sql = "SELECT * FROM groups";
+
+				using (var cmd = new MySqlCommand(sql, conn))
+				{
+					using (var reader = cmd.ExecuteReader())
+					{
+						while (reader.Read())
+						{
+							groups.Add(new Group
+							{
+								GroupId = Convert.ToInt32(reader["group_id"]),
+								Name = reader["name"].ToString()
+							});
+						}
+					}
+				}
+			}
+			return groups;
 		}
 		public void Add(Group group)
 		{

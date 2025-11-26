@@ -136,5 +136,21 @@ namespace academic_system
 				}
 			}
 		}
+		public void AssignTeacherToSubject(int subjectId, int teacherId)
+		{
+			using (var conn = new MySqlConnection(connStr))
+			{
+				conn.Open();
+				string sql = "UPDATE subject SET teacher_id = @teacherId WHERE subject_id = @subjectId";
+
+				using (var cmd = new MySqlCommand(sql, conn))
+				{
+					cmd.Parameters.AddWithValue("@teacherId", teacherId);
+					cmd.Parameters.AddWithValue("@subjectId", subjectId);
+					cmd.ExecuteNonQuery();
+				}
+			}
+		}
 	}
 }
+

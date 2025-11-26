@@ -96,6 +96,36 @@ namespace academic_system
 
 			return students;
 		}
+
+		public List<Student> GetAll()
+		{
+			List<Student> students = new List<Student>();
+
+			using (var conn = new MySqlConnection(connStr))
+			{
+				conn.Open();
+				string sql = "SELECT * FROM student";
+
+				using (var cmd = new MySqlCommand(sql, conn))
+				{
+					using (var reader = cmd.ExecuteReader())
+					{
+						while (reader.Read())
+						{
+							students.Add(new Student
+							{
+								StudentId = Convert.ToInt32(reader["student_id"]),
+								UserId = Convert.ToInt32(reader["user_id"]),
+								GroupId = Convert.ToInt32(reader["group_id"]),
+								FirstName = reader["first_name"].ToString(),
+								LastName = reader["last_name"].ToString()
+							});
+						}
+					}
+				}
+			}
+			return students;
+		}
 		public void Add(Student student)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -138,6 +168,21 @@ namespace academic_system
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
 					cmd.Parameters.AddWithValue("@id", studentId);
+					cmd.ExecuteNonQuery();
+				}
+			}
+		}
+		public void AssignStudentToGroup(int studentId, int groupId)
+		{
+			using (var conn = new MySqlConnection(connStr))
+			{
+				conn.Open();
+				string sql = "UPDATE student SET group_id = @groupId WHERE student_id = @studentId";
+
+				using (var cmd = new MySqlCommand(sql, conn))
+				{
+					cmd.Parameters.AddWithValue("@studentId", studentId);
+					cmd.Parameters.AddWithValue("@groupId", groupId);
 					cmd.ExecuteNonQuery();
 				}
 			}
