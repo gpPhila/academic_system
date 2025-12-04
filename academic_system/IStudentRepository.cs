@@ -12,6 +12,6 @@ namespace academic_system
         Student GetByUserId(int userId);
 		List<Student> GetAll();
 		List<Student> GetByGroupId(int groupId);
-        void AssigntStudentToGroup(int studentId, int groupId);
+        void AssignStudentToGroup(int studentId, int groupId);
     }
 }

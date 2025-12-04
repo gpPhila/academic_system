@@ -84,5 +84,19 @@ namespace academic_system
 				}
 			}
 		}
+		public void UpdatePassword(int userId, string newPassword)
+		{
+			using (var conn = new MySqlConnection(connStr))
+			{
+				conn.Open();
+				string sql = "UPDATE users SET password=@password WHERE user_id=@id";
+				using (var cmd = new MySqlCommand(sql, conn))
+				{
+					cmd.Parameters.AddWithValue("@password", newPassword);
+					cmd.Parameters.AddWithValue("@id", userId);
+					cmd.ExecuteNonQuery();
+				}
+			}
+		}
 	}
 }

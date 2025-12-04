@@ -11,5 +11,6 @@ namespace academic_system
         Grade GetById(int gradeId);
         List <Grade> GetByStudentId(int studentId);
         List<Grade> GetByTeacherId(int subjectId);
+        void UpdateValue(int gradeId, string newValue);
     }
 }

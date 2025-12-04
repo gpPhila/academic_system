@@ -142,5 +142,19 @@ namespace academic_system
 				}
 			}
 		}
+		public void UpdateValue(int gradeId, string newValue)
+		{
+			using (var conn = new MySqlConnection(connStr))
+			{
+				conn.Open();
+				string sql = "UPDATE grade SET value=@value WHERE grade_id=@gradeId";
+				using (var cmd = new MySqlCommand(sql, conn))
+				{
+					cmd.Parameters.AddWithValue("@value", newValue);
+					cmd.Parameters.AddWithValue("@gradeId", gradeId);
+					cmd.ExecuteNonQuery();
+				}
+			}
+		}
 	}
 }

@@ -59,6 +59,28 @@ namespace academic_system
 			return createdUser.UserId;
 		}
 
+		public void UpdateUser (int userId, string login, string password, string role)
+		{
+			var user = new User
+			{
+				UserId = userId,
+				Login = login,
+				Password = password,
+				Role = role
+			};
+
+			userRepository.Update(user);
+		}
+
+		public void UpdatePasswordByUser(int userId, string newPassword)
+		{
+			userRepository.UpdatePassword(userId, newPassword);
+		}
+
+		public void DeleteUser(int userId)
+		{
+			userRepository.Delete(userId);
+		}
 
 		// ---- STUDENT METHODS ----
 
@@ -76,7 +98,18 @@ namespace academic_system
 			studentRepository.Add(student);
 		}
 
-		public void UpdateStudent() { }
+		public void UpdateStudent(int studentId, int groupId, string firstName, string lastName)
+		{
+			var student = new Student
+			{
+				StudentId = studentId,
+				GroupId = groupId,
+				FirstName = firstName,
+				LastName = lastName
+			};
+
+			studentRepository.Update(student);
+		}
 		public void DeleteStudent(int studentId)
 		{
 			studentRepository.Delete(studentId);
@@ -94,7 +127,7 @@ namespace academic_system
 
 		public void AssignStudentToGroup(int studentId, int groupId)
 		{
-			studentRepository.AssigntStudentToGroup(studentId, groupId);
+			studentRepository.AssignStudentToGroup(studentId, groupId);
 		}
 
 		// ---- TEACHER METHODS ----
@@ -112,7 +145,17 @@ namespace academic_system
 			teacherRepository.Add(teacher);
 		}
 
-		public void UpdateTeacher() { }
+		public void UpdateTeacher(int teacherId, string firstName, string lastName)
+		{
+			var teacher = new Teacher
+			{
+				TeacherId = teacherId,
+				FirstName = firstName,
+				LastName = lastName
+			};
+
+			teacherRepository.Update(teacher);
+		}
 
 		public void DeleteTeacher(int teacherId)
 		{
@@ -159,7 +202,18 @@ namespace academic_system
 			subjectRepository.Add(subject);
 		}
 
-		public void UpdateSubject() { }
+		public void UpdateSubject(int subjectId, int teacherId, string name, string description)
+		{
+			var subject = new Subject
+			{
+				SubjectId = subjectId,
+				TeacherId = teacherId,
+				Name = name,
+				Description = description
+			};
+
+			subjectRepository.Update(subject);
+		}
 
 		public void DeleteSubject(int subjectId)
 		{
@@ -202,7 +256,7 @@ namespace academic_system
 
 		public void EditGrade(int gradeId, string newValue)
 		{
-			//do this lol kek
+			gradeRepository.UpdateValue(gradeId, newValue);
 		}
 
 		public void DeleteGrade(int gradeId)
@@ -214,6 +268,43 @@ namespace academic_system
 		{
 			return gradeRepository.GetByStudentId(studentId);
 		}
+		/*
+		public List<string> ViewGradeDetailsByStudent(int studentId)
+		{
+			var output = new List<string>();
+
+			var grades = gradeRepository.GetByStudentId(studentId);
+			
+			foreach (var g in grades)
+			{
+				var teacher = teacherRepository.GetById(g.TeacherId);
+				var subject = subjectRepository.GetById(g.SubjectId);
+
+				string line = $"{subject.Name} — {g.Value} (Teacher: {teacher.FirstName} {teacher.LastName})";
+				output.Add(line);
+			}
+
+			return output;
+		}
+
+		public List<string> ViewGradeDetailsByTeacher(int teacherId)
+		{
+			var output = new List<string>();
+
+			var grades = gradeRepository.GetByTeacherId(teacherId);
+
+			foreach (var g in grades)
+			{
+				var student = studentRepository.GetById(g.StudentId);
+				var subject = subjectRepository.GetById(g.SubjectId);
+
+				string line = $"{subject.Name} — {g.Value} (Student: {student.FirstName} {student.LastName})";
+				output.Add(line);
+			}
+
+			return output;
+		}
+		*/
 
 		public List <Grade> ViewGradesByTeacher(int teacherId)
 		{

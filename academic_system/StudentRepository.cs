@@ -147,10 +147,9 @@ namespace academic_system
 			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
-				string sql = "UPDATE student SET user_id=@userId, group_id=@groupId, first_name=@firstName, last_name=@lastName WHERE student_id=@id";
+				string sql = "UPDATE student SET group_id=@groupId, first_name=@firstName, last_name=@lastName WHERE student_id=@id";
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
-					cmd.Parameters.AddWithValue("@userId", student.UserId);
 					cmd.Parameters.AddWithValue("@groupId", student.GroupId);
 					cmd.Parameters.AddWithValue("@firstName", student.FirstName);
 					cmd.Parameters.AddWithValue("@lastName", student.LastName);

@@ -8,7 +8,8 @@ namespace academic_system
 {
 	public interface IUserRepository : IBaseRepository<User>
 	{
-		User GetByLogin(string login);  
+		User GetByLogin(string login);
+		void UpdatePassword(int userId, string newPassword);
 		//void Add(User user);            
 		//void Update(User user);         
 		//void Delete(int userId);
