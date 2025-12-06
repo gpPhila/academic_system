@@ -80,3 +80,4 @@ D:\coding\academic_system\academic_system\obj\Debug\academic_system.csproj.CoreC
 D:\coding\academic_system\academic_system\obj\Debug\academic.32B36904.Up2Date
 D:\coding\academic_system\academic_system\obj\Debug\academic_system.exe
 D:\coding\academic_system\academic_system\obj\Debug\academic_system.pdb
+D:\coding\academic_system\academic_system\obj\Debug\academic_system.AdminDashboard.resources

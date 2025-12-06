@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
+using academic_system;
 
 namespace academic_system
 {
@@ -73,9 +75,35 @@ namespace academic_system
 			{
 				MessageBox.Show("Welcome student!");
 			}
+
+			var userRepository = new UserRepository();
+			var studentRepository = new StudentRepository();
+			var teacherRepository = new TeacherRepository();
+			var groupRepository = new GroupRepository();
+			var subjectRepository = new SubjectRepository();
+			var gosRepository = new GOSRepository();
+			var gradeRepository = new GradeRepository();
+
+			AdminManager manager;
+
+			switch (user.Role)
+			{
+				case "admin":
+					manager = new AdminManager(userRepository,
+			studentRepository,
+			teacherRepository,
+			groupRepository,
+			subjectRepository,
+			gosRepository,
+			gradeRepository);
+				var adminForm = new AdminDashboard(manager, user);
+				this.Hide();
+				adminForm.Show();
+				break;
+			}
 		}
 
-        private void LoginForm_Load(object sender, EventArgs e)
+		private void LoginForm_Load(object sender, EventArgs e)
         {
 
         }
