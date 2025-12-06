@@ -16,8 +16,32 @@ namespace academic_system
 		   ISubjectRepository subjectRepository,
 		   IGOSRepository gOSRepository,
 		   IGradeRepository gradeRepository) : base(userRepository, studentRepository, teacherRepository, groupRepository, subjectRepository, gOSRepository, gradeRepository)
+		{}
+		public void AddGrade(int studentId, int subjectId, int teacherId, string value)
 		{
+			var grade = new Grade
+			{
+				StudentId = studentId,
+				SubjectId = subjectId,
+				TeacherId = teacherId,
+				Value = value
+			};
 
+			gradeRepository.Add(grade);
+		}
+
+		public void EditGrade(int gradeId, string newValue)
+		{
+			gradeRepository.UpdateValue(gradeId, newValue);
+		}
+
+		public void DeleteGrade(int gradeId)
+		{
+			gradeRepository.Delete(gradeId);
+		}
+		public List<Grade> ViewGradesByTeacher(int teacherId)
+		{
+			return gradeRepository.GetByTeacherId(teacherId);
 		}
 	}
 }

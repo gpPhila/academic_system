@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using academic_system;
 
 namespace academic_system
 {
@@ -16,8 +17,153 @@ namespace academic_system
             ISubjectRepository subjectRepository,
             IGOSRepository gOSRepository,
             IGradeRepository gradeRepository) : base(userRepository, studentRepository, teacherRepository, groupRepository, subjectRepository, gOSRepository, gradeRepository)
-        {
+        {}
+		public int CreateUser(string login, string password, string role)
+		{
+			var user = new User
+			{
+				Login = login,
+				Password = password,
+				Role = role
+			};
 
-        }
-    }
+			userRepository.Add(user);
+			var createdUser = userRepository.GetByLogin(login);
+			return createdUser.UserId;
+		}
+
+		public void UpdateUser(int userId, string login, string password, string role)
+		{
+			var user = new User
+			{
+				UserId = userId,
+				Login = login,
+				Password = password,
+				Role = role
+			};
+
+			userRepository.Update(user);
+		}
+		public void DeleteUser(int userId)
+		{
+			userRepository.Delete(userId);
+		}
+		public void CreateStudent(int groupId, string firstName, string lastName)
+		{
+			int newUserId = CreateUser(firstName, lastName, "student");
+			var student = new Student
+			{
+				UserId = newUserId,
+				GroupId = groupId,
+				FirstName = firstName,
+				LastName = lastName
+			};
+
+			studentRepository.Add(student);
+		}
+		public void UpdateStudent(int studentId, int groupId, string firstName, string lastName)
+		{
+			var student = new Student
+			{
+				StudentId = studentId,
+				GroupId = groupId,
+				FirstName = firstName,
+				LastName = lastName
+			};
+
+			studentRepository.Update(student);
+		}
+		public void DeleteStudent(int studentId)
+		{
+			studentRepository.Delete(studentId);
+		}
+		public void AssignStudentToGroup(int studentId, int groupId)
+		{
+			studentRepository.AssignStudentToGroup(studentId, groupId);
+		}
+		public void CreateTeacher(int userId, string firstName, string lastName)
+		{
+			int newUserId = CreateUser(firstName, lastName, "teacher");
+			var teacher = new Teacher
+			{
+				UserId = userId,
+				FirstName = firstName,
+				LastName = lastName
+			};
+
+			teacherRepository.Add(teacher);
+		}
+
+		public void UpdateTeacher(int teacherId, string firstName, string lastName)
+		{
+			var teacher = new Teacher
+			{
+				TeacherId = teacherId,
+				FirstName = firstName,
+				LastName = lastName
+			};
+
+			teacherRepository.Update(teacher);
+		}
+
+		public void DeleteTeacher(int teacherId)
+		{
+			teacherRepository.Delete(teacherId);
+		}
+		public List<Teacher> GetAllTeachers()
+		{
+			return teacherRepository.GetAll();
+		}
+		public void CreateGroup(string name)
+		{
+			var group = new Group
+			{
+				Name = name
+			};
+
+			groupRepository.Add(group);
+		}
+
+		public void DeleteGroup(int groupId)
+		{
+			groupRepository.Delete(groupId);
+		}
+		public void CreateSubject(string name, string description)
+		{
+			var subject = new Subject
+			{
+				Name = name,
+				Description = description
+			};
+
+			subjectRepository.Add(subject);
+		}
+
+		public void UpdateSubject(int subjectId, int teacherId, string name, string description)
+		{
+			var subject = new Subject
+			{
+				SubjectId = subjectId,
+				TeacherId = teacherId,
+				Name = name,
+				Description = description
+			};
+
+			subjectRepository.Update(subject);
+		}
+
+		public void DeleteSubject(int subjectId)
+		{
+			subjectRepository.Delete(subjectId);
+		}
+		public void AssignTeacherToSubject(int subjectId, int teacherId)
+		{
+			subjectRepository.AssignTeacherToSubject(subjectId, teacherId);
+		}
+		public void AssignSubjectToGroup(int groupId, int subjectId)
+		{
+			gOSRepository.AssignSubjectToGroup(groupId, subjectId);
+		}
+
+	}
 }
