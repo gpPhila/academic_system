@@ -10,6 +10,7 @@ namespace academic_system
 	{
 		User GetByLogin(string login);
 		void UpdatePassword(int userId, string newPassword);
+		List <User> GetAll();
 		//void Add(User user);            
 		//void Update(User user);         
 		//void Delete(int userId);

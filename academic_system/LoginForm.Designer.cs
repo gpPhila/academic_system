@@ -43,7 +43,6 @@
 			this.label1.Size = new System.Drawing.Size(65, 25);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Login";
-			this.label1.Click += new System.EventHandler(this.label1_Click);
 			// 
 			// txtLogin
 			// 
@@ -51,7 +50,6 @@
 			this.txtLogin.Name = "txtLogin";
 			this.txtLogin.Size = new System.Drawing.Size(298, 31);
 			this.txtLogin.TabIndex = 1;
-			this.txtLogin.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
 			// 
 			// label2
 			// 
@@ -61,7 +59,6 @@
 			this.label2.Size = new System.Drawing.Size(106, 25);
 			this.label2.TabIndex = 2;
 			this.label2.Text = "Password";
-			this.label2.Click += new System.EventHandler(this.label2_Click);
 			// 
 			// txtPassword
 			// 
@@ -93,7 +90,6 @@
 			this.Controls.Add(this.label1);
 			this.Name = "LoginForm";
 			this.Text = "Form1";
-			this.Load += new System.EventHandler(this.LoginForm_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

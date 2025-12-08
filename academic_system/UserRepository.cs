@@ -98,5 +98,33 @@ namespace academic_system
 				}
 			}
 		}
+		public List <User> GetAll()
+		{
+			List<User> users = new List<User>();
+
+			using (var conn = new MySqlConnection(connStr))
+			{
+				conn.Open();
+				string sql = "SELECT * FROM users";
+
+				using (var cmd = new MySqlCommand(sql, conn))
+				{
+					using (var reader = cmd.ExecuteReader())
+					{
+						while (reader.Read())
+						{
+							users.Add(new User
+							{
+								UserId = Convert.ToInt32(reader["user_id"]),
+								Login = reader["login"].ToString(),
+								Password = reader["password"].ToString(),
+								Role = reader["role"].ToString()
+							});
+						}
+					}
+				}
+			}
+			return users;
+		}
 	}
 }

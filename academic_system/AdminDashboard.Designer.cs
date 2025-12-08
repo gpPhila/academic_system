@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
 			this.label1 = new System.Windows.Forms.Label();
-			this.button1 = new System.Windows.Forms.Button();
+			this.btnManageUsers = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
 			this.button4 = new System.Windows.Forms.Button();
@@ -48,14 +48,15 @@
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Admin Dashboard";
 			// 
-			// button1
+			// btnManageUsers
 			// 
-			this.button1.Location = new System.Drawing.Point(493, 207);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(267, 52);
-			this.button1.TabIndex = 1;
-			this.button1.Text = "Manage users";
-			this.button1.UseVisualStyleBackColor = true;
+			this.btnManageUsers.Location = new System.Drawing.Point(493, 207);
+			this.btnManageUsers.Name = "btnManageUsers";
+			this.btnManageUsers.Size = new System.Drawing.Size(267, 52);
+			this.btnManageUsers.TabIndex = 1;
+			this.btnManageUsers.Text = "Manage users";
+			this.btnManageUsers.UseVisualStyleBackColor = true;
+			this.btnManageUsers.Click += new System.EventHandler(this.btnManageUsers_Click);
 			// 
 			// button2
 			// 
@@ -111,6 +112,7 @@
 			this.button6.TabIndex = 8;
 			this.button6.Text = "Manage account";
 			this.button6.UseVisualStyleBackColor = true;
+			this.button6.Click += new System.EventHandler(this.button6_Click);
 			// 
 			// AdminDashboard
 			// 
@@ -123,7 +125,7 @@
 			this.Controls.Add(this.button4);
 			this.Controls.Add(this.button3);
 			this.Controls.Add(this.button2);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.btnManageUsers);
 			this.Controls.Add(this.label1);
 			this.Name = "AdminDashboard";
 			this.Text = "AdminDashboard";
@@ -135,7 +137,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnManageUsers;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;

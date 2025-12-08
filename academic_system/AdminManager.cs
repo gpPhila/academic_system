@@ -18,6 +18,10 @@ namespace academic_system
             IGOSRepository gOSRepository,
             IGradeRepository gradeRepository) : base(userRepository, studentRepository, teacherRepository, groupRepository, subjectRepository, gOSRepository, gradeRepository)
         {}
+		public List<User> GetAllUsers()
+		{
+			return userRepository.GetAll();
+		}
 		public int CreateUser(string login, string password, string role)
 		{
 			var user = new User

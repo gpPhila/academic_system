@@ -36,6 +36,14 @@ namespace academic_system
 			this.gOSRepository = gOSRepository;
 			this.gradeRepository = gradeRepository;
 		}
+		public IUserRepository UserRepository => userRepository;
+		public IStudentRepository StudentRepository => studentRepository;
+		public ITeacherRepository TeacherRepository => teacherRepository;
+		public IGroupRepository GroupRepository => groupRepository;
+		public ISubjectRepository SubjectRepository => subjectRepository;
+		public IGOSRepository GOSRepository => gOSRepository;
+		public IGradeRepository GradeRepository => gradeRepository;
+
 		/*
 		public User GetUserById(int id)
 		{

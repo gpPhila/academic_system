@@ -27,5 +27,17 @@ namespace academic_system
 			this.Close();
             LoginForm.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+			var form = new ManageAccountForm(currentUser, manager.UserRepository);
+			form.ShowDialog();
+		}
+
+        private void btnManageUsers_Click(object sender, EventArgs e)
+        {
+            var form = new ManageUsersForm(manager);
+            form.ShowDialog();
+        }
     }
 }
