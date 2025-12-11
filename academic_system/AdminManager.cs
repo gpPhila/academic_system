@@ -54,7 +54,7 @@ namespace academic_system
 		}
 		public void CreateStudent(int groupId, string firstName, string lastName)
 		{
-			int newUserId = CreateUser(firstName, lastName, "student");
+			int newUserId = CreateUser(firstName.ToLower(), lastName.ToLower(), "student");
 			var student = new Student
 			{
 				UserId = newUserId,
@@ -85,12 +85,12 @@ namespace academic_system
 		{
 			studentRepository.AssignStudentToGroup(studentId, groupId);
 		}
-		public void CreateTeacher(int userId, string firstName, string lastName)
+		public void CreateTeacher(string firstName, string lastName)
 		{
-			int newUserId = CreateUser(firstName, lastName, "teacher");
+			int newUserId = CreateUser(firstName.ToLower(), lastName.ToLower(), "Teacher");
 			var teacher = new Teacher
 			{
-				UserId = userId,
+				UserId = newUserId,
 				FirstName = firstName,
 				LastName = lastName
 			};
@@ -110,9 +110,17 @@ namespace academic_system
 			teacherRepository.Update(teacher);
 		}
 
+		public Teacher GetTeacherById(int teacherId) 
+		{
+			return teacherRepository.GetById(teacherId);
+		}
+
 		public void DeleteTeacher(int teacherId)
 		{
+			Teacher t = teacherRepository.GetById(teacherId);
+			int userId = t.UserId;
 			teacherRepository.Delete(teacherId);
+			userRepository.Delete(userId);
 		}
 		public List<Teacher> GetAllTeachers()
 		{
@@ -132,12 +140,13 @@ namespace academic_system
 		{
 			groupRepository.Delete(groupId);
 		}
-		public void CreateSubject(string name, string description)
+		public void CreateSubject(string name, string description, int teacherId)
 		{
 			var subject = new Subject
 			{
 				Name = name,
-				Description = description
+				Description = description,
+				TeacherId = teacherId
 			};
 
 			subjectRepository.Add(subject);
@@ -155,7 +164,10 @@ namespace academic_system
 
 			subjectRepository.Update(subject);
 		}
-
+		public Subject GetSubjectById(int subjectId)
+		{
+			return subjectRepository.GetById(subjectId);
+		}
 		public void DeleteSubject(int subjectId)
 		{
 			subjectRepository.Delete(subjectId);

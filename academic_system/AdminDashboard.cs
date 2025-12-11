@@ -39,5 +39,22 @@ namespace academic_system
             var form = new ManageUsersForm(manager);
             form.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var form = new ManageTeachersForm(manager);
+            form.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var form = new ManageSubjectsForm(manager);
+            form.ShowDialog();
+        }
     }
 }

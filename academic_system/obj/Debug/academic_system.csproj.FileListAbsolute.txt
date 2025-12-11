@@ -83,3 +83,8 @@ D:\coding\academic_system\academic_system\obj\Debug\academic_system.pdb
 D:\coding\academic_system\academic_system\obj\Debug\academic_system.AdminDashboard.resources
 D:\coding\academic_system\academic_system\obj\Debug\academic_system.ManageAccountForm.resources
 D:\coding\academic_system\academic_system\obj\Debug\academic_system.ManageUsersForm.resources
+D:\coding\academic_system\academic_system\obj\Debug\academic_system.UserEditorForm.resources
+D:\coding\academic_system\academic_system\obj\Debug\academic_system.ManageSubjectsForm.resources
+D:\coding\academic_system\academic_system\obj\Debug\academic_system.ManageTeachersForm.resources
+D:\coding\academic_system\academic_system\obj\Debug\academic_system.TeacherEditorForm.resources
+D:\coding\academic_system\academic_system\obj\Debug\academic_system.SubjectEditorForm.resources

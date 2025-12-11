@@ -130,6 +130,18 @@
     <Compile Include="ManageAccountForm.Designer.cs">
       <DependentUpon>ManageAccountForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageSubjectsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageSubjectsForm.Designer.cs">
+      <DependentUpon>ManageSubjectsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTeachersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageTeachersForm.Designer.cs">
+      <DependentUpon>ManageTeachersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageUsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,11 +154,29 @@
     <Compile Include="StudentManager.cs" />
     <Compile Include="StudentRepository.cs" />
     <Compile Include="Subject.cs" />
+    <Compile Include="SubjectEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectEditorForm.Designer.cs">
+      <DependentUpon>SubjectEditorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubjectRepository.cs" />
     <Compile Include="Teacher.cs" />
+    <Compile Include="TeacherEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherEditorForm.Designer.cs">
+      <DependentUpon>TeacherEditorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeacherManager.cs" />
     <Compile Include="TeacherRepository.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="UserEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserEditorForm.Designer.cs">
+      <DependentUpon>UserEditorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserRepository.cs" />
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
@@ -156,6 +186,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManageAccountForm.resx">
       <DependentUpon>ManageAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageSubjectsForm.resx">
+      <DependentUpon>ManageSubjectsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageTeachersForm.resx">
+      <DependentUpon>ManageTeachersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageUsersForm.resx">
       <DependentUpon>ManageUsersForm.cs</DependentUpon>
@@ -169,6 +205,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SubjectEditorForm.resx">
+      <DependentUpon>SubjectEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherEditorForm.resx">
+      <DependentUpon>TeacherEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserEditorForm.resx">
+      <DependentUpon>UserEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
