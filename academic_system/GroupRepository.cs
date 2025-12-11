@@ -12,7 +12,7 @@ namespace academic_system
 			using (var conn = new MySqlConnection(connStr)) //connection string
 			{
 				conn.Open();
-				string sql = "SELECT * FROM groups WHERE group_id=@id LIMIT 1";
+				string sql = "SELECT * FROM `groups` WHERE group_id=@id LIMIT 1";
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
 					cmd.Parameters.AddWithValue("@id", groupId); //replacement
@@ -38,7 +38,7 @@ namespace academic_system
 			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
-				string sql = "SELECT * FROM groups";
+				string sql = "SELECT * FROM `groups`";
 
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
@@ -62,7 +62,7 @@ namespace academic_system
 			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
-				string sql = "INSERT INTO groups (name) VALUES (@name)";
+				string sql = "INSERT INTO `groups` (name) VALUES (@name)";
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
 					cmd.Parameters.AddWithValue("@name", group.Name);
@@ -75,7 +75,7 @@ namespace academic_system
 			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
-				string sql = "UPDATE groups SET name=@name WHERE group_id=@id";
+				string sql = "UPDATE `groups` SET name=@name WHERE group_id=@id";
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
 					cmd.Parameters.AddWithValue("@name", group.Name);
@@ -89,7 +89,7 @@ namespace academic_system
 			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
-				string sql = "DELETE FROM groups WHERE group_id=@id";
+				string sql = "DELETE FROM `groups` WHERE group_id=@id";
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
 					cmd.Parameters.AddWithValue("@id", groupId);

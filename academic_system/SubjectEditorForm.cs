@@ -18,12 +18,22 @@ namespace academic_system
 
 		public string SubjectName => txtName.Text.Trim();
 		public string SubjectDescription => txtDescription.Text.Trim();
-		public int SelectedTeacherId 
+
+		public int SelectedTeacherId
 		{
 			get
 			{
-				return (int)cmbTeacher.SelectedValue;
+				if (cmbTeacher.SelectedItem is TeacherOption option)
+					return option.Id;
+
+				return -1;
 			}
+		}
+		private class TeacherOption
+		{
+			public int Id { get; set; }
+			public string Name { get; set; }
+			public override string ToString() => Name;
 		}
 
 		public SubjectEditorForm(string title, AdminManager manager, Subject subject = null)
@@ -41,34 +51,24 @@ namespace academic_system
 		}
 		private void LoadTeachersIntoComboBox()
 		{
-			/*
 			cmbTeacher.Items.Clear();
-			var teachers = manager.GetAllTeachers();
 
-			cmbTeacher.Items.Add("No teacher");
-
-			foreach (var t in teachers)
-				cmbTeacher.Items.Add(t);
-
-			cmbTeacher.DisplayMember = "FirstName";
-			*/
-
-			cmbTeacher.Items.Clear();
-			//cmbTeacher.Items.Add(new { Name = "No teacher", Id = (int?)null });
-
-			var teachers = manager.GetAllTeachers();
-
-			foreach (var t in teachers)
+			cmbTeacher.Items.Add(new TeacherOption
 			{
-				cmbTeacher.Items.Add(new
+				Id = -1,
+				Name = "--- Select a teacher ---"
+			});
+
+			foreach (var teacher in manager.GetAllTeachers())
+			{
+				cmbTeacher.Items.Add(new TeacherOption
 				{
-					Name = $"{t.FirstName} {t.LastName}",
-					Id = (int?)t.TeacherId
+					Id = teacher.TeacherId,
+					Name = $"{teacher.FirstName} {teacher.LastName}"
 				});
 			}
 
-			cmbTeacher.DisplayMember = "Name";
-			cmbTeacher.ValueMember = "Id";
+			cmbTeacher.SelectedIndex = 0;
 		}
 
 		private void LoadExistingData()
@@ -76,20 +76,13 @@ namespace academic_system
 			txtName.Text = existingSubject.Name;
 			txtDescription.Text = existingSubject.Description;
 
-			if (existingSubject.TeacherId != 0)
+			foreach (var item in cmbTeacher.Items)
 			{
-				foreach (var item in cmbTeacher.Items)
+				if (item is TeacherOption option && option.Id == existingSubject.TeacherId)
 				{
-					if (item is Teacher teacher && teacher.TeacherId == existingSubject.TeacherId)
-					{
-						cmbTeacher.SelectedItem = item;
-						break;
-					}
+					cmbTeacher.SelectedItem = item;
+					return;
 				}
-			}
-			else
-			{
-				cmbTeacher.SelectedIndex = 0; 
 			}
 		}
 
@@ -98,6 +91,12 @@ namespace academic_system
 			if (string.IsNullOrWhiteSpace(SubjectName))
 			{
 				MessageBox.Show("Please enter subject name.");
+				return;
+			}
+
+			if (SelectedTeacherId == -1)
+			{
+				MessageBox.Show("Please select a teacher.");
 				return;
 			}
 

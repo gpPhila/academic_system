@@ -130,6 +130,12 @@
     <Compile Include="ManageAccountForm.Designer.cs">
       <DependentUpon>ManageAccountForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageStudentGroupsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageStudentGroupsForm.Designer.cs">
+      <DependentUpon>ManageStudentGroupsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageSubjectsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
+    <Compile Include="StudentGroupsEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentGroupsEditorForm.Designer.cs">
+      <DependentUpon>StudentGroupsEditorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentManager.cs" />
     <Compile Include="StudentRepository.cs" />
     <Compile Include="Subject.cs" />
@@ -187,6 +199,9 @@
     <EmbeddedResource Include="ManageAccountForm.resx">
       <DependentUpon>ManageAccountForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageStudentGroupsForm.resx">
+      <DependentUpon>ManageStudentGroupsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageSubjectsForm.resx">
       <DependentUpon>ManageSubjectsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +220,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StudentGroupsEditorForm.resx">
+      <DependentUpon>StudentGroupsEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubjectEditorForm.resx">
       <DependentUpon>SubjectEditorForm.cs</DependentUpon>
     </EmbeddedResource>

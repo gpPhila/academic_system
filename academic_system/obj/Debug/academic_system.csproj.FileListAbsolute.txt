@@ -88,3 +88,5 @@ D:\coding\academic_system\academic_system\obj\Debug\academic_system.ManageSubjec
 D:\coding\academic_system\academic_system\obj\Debug\academic_system.ManageTeachersForm.resources
 D:\coding\academic_system\academic_system\obj\Debug\academic_system.TeacherEditorForm.resources
 D:\coding\academic_system\academic_system\obj\Debug\academic_system.SubjectEditorForm.resources
+D:\coding\academic_system\academic_system\obj\Debug\academic_system.ManageStudentGroupsForm.resources
+D:\coding\academic_system\academic_system\obj\Debug\academic_system.StudentGroupsEditorForm.resources

@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "D:\\coding\\academic_system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\subjecteditorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\subjecteditorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\managestudentgroupsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\managestudentgroupsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\managestudentgroupsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\managestudentgroupsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|D:\\coding\\academic_system\\academic_system\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\managesubjectsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\managesubjectsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|D:\\coding\\academic_system\\academic_system\\managesubjectsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\managesubjectsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\adminmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\adminmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\manageteachersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\manageteachersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,62 +34,75 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AdminManager.cs",
-              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\AdminManager.cs",
-              "RelativeDocumentMoniker": "academic_system\\AdminManager.cs",
-              "ToolTip": "D:\\coding\\academic_system\\academic_system\\AdminManager.cs",
-              "RelativeToolTip": "academic_system\\AdminManager.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAAAJYAAAAAAAAAAAAAAA==",
+              "Title": "AdminDashboard.cs",
+              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\AdminDashboard.cs",
+              "RelativeDocumentMoniker": "academic_system\\AdminDashboard.cs",
+              "ToolTip": "D:\\coding\\academic_system\\academic_system\\AdminDashboard.cs",
+              "RelativeToolTip": "academic_system\\AdminDashboard.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAcwD4AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T01:51:12.939Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SubjectEditorForm.cs",
-              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\SubjectEditorForm.cs",
-              "RelativeDocumentMoniker": "academic_system\\SubjectEditorForm.cs",
-              "ToolTip": "D:\\coding\\academic_system\\academic_system\\SubjectEditorForm.cs",
-              "RelativeToolTip": "academic_system\\SubjectEditorForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T01:47:04.558Z",
+              "WhenOpened": "2025-12-11T15:46:44.14Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ManageSubjectsForm.cs",
-              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\ManageSubjectsForm.cs",
-              "RelativeDocumentMoniker": "academic_system\\ManageSubjectsForm.cs",
-              "ToolTip": "D:\\coding\\academic_system\\academic_system\\ManageSubjectsForm.cs",
-              "RelativeToolTip": "academic_system\\ManageSubjectsForm.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAmwEgAAAAEAAAAAAAAAA==",
+              "Title": "AdminManager.cs",
+              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\AdminManager.cs",
+              "RelativeDocumentMoniker": "academic_system\\AdminManager.cs",
+              "ToolTip": "D:\\coding\\academic_system\\academic_system\\AdminManager.cs",
+              "RelativeToolTip": "academic_system\\AdminManager.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAWwIYAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T23:35:39.143Z",
+              "WhenOpened": "2025-12-11T15:37:41.299Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ManageSubjectsForm.cs [Design]",
-              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\ManageSubjectsForm.cs",
-              "RelativeDocumentMoniker": "academic_system\\ManageSubjectsForm.cs",
-              "ToolTip": "D:\\coding\\academic_system\\academic_system\\ManageSubjectsForm.cs [Design]",
-              "RelativeToolTip": "academic_system\\ManageSubjectsForm.cs [Design]",
+              "DocumentIndex": 5,
+              "Title": "ManageTeachersForm.cs",
+              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\ManageTeachersForm.cs",
+              "RelativeDocumentMoniker": "academic_system\\ManageTeachersForm.cs",
+              "ToolTip": "D:\\coding\\academic_system\\academic_system\\ManageTeachersForm.cs",
+              "RelativeToolTip": "academic_system\\ManageTeachersForm.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAAAFgAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T23:33:00.942Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-12-11T15:35:37.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ManageStudentGroupsForm.cs",
+              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\ManageStudentGroupsForm.cs",
+              "RelativeDocumentMoniker": "academic_system\\ManageStudentGroupsForm.cs",
+              "ToolTip": "D:\\coding\\academic_system\\academic_system\\ManageStudentGroupsForm.cs",
+              "RelativeToolTip": "academic_system\\ManageStudentGroupsForm.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAAFgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T15:15:30.174Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ManageStudentGroupsForm.cs [Design]",
+              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\ManageStudentGroupsForm.cs",
+              "RelativeDocumentMoniker": "academic_system\\ManageStudentGroupsForm.cs",
+              "ToolTip": "D:\\coding\\academic_system\\academic_system\\ManageStudentGroupsForm.cs [Design]",
+              "RelativeToolTip": "academic_system\\ManageStudentGroupsForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T15:13:49.287Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AdminDashboard.cs [Design]",
               "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\AdminDashboard.cs",
               "RelativeDocumentMoniker": "academic_system\\AdminDashboard.cs",

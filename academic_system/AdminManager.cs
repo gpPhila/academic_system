@@ -115,6 +115,20 @@ namespace academic_system
 			return teacherRepository.GetById(teacherId);
 		}
 
+		public List<(string DisplayName, int Id)> GetTeachersForDropdown()
+		{
+			var teachers = GetAllTeachers();
+			var result = new List<(string, int)>
+			{
+				("No teacher", 0)
+			};
+
+			result.AddRange(teachers.Select(t =>
+				($"{t.FirstName} {t.LastName}", t.TeacherId)));
+
+			return result;
+		}
+
 		public void DeleteTeacher(int teacherId)
 		{
 			Teacher t = teacherRepository.GetById(teacherId);
@@ -134,6 +148,22 @@ namespace academic_system
 			};
 
 			groupRepository.Add(group);
+		}
+
+		public Group GetGroupById(int groupId)
+		{
+			return groupRepository.GetById(groupId);
+		}
+
+		public void UpdateGroup(int groupId, string name)
+		{
+			var group = new Group
+			{
+				GroupId = groupId,
+				Name = name
+			};
+
+			groupRepository.Update(group);
 		}
 
 		public void DeleteGroup(int groupId)
