@@ -9,7 +9,7 @@ namespace academic_system
     public class GroupOfSubjects
     {
         public int GOSId { get; set; }
-        public int GroupId { get; set; }
+        public string Name { get; set; }
         public int SubjectId { get; set; }
     }
 }

@@ -24,6 +24,8 @@ namespace academic_system
 							{
 								GroupId = Convert.ToInt32(reader["group_id"]),
 								Name = reader["name"].ToString(),
+								GosId = reader["gos_id"] == DBNull.Value ? null
+								: (int?)Convert.ToInt32(reader["gos_id"])
 							};
 						}
 					}
@@ -49,7 +51,9 @@ namespace academic_system
 							groups.Add(new Group
 							{
 								GroupId = Convert.ToInt32(reader["group_id"]),
-								Name = reader["name"].ToString()
+								Name = reader["name"].ToString(),
+								GosId = reader["gos_id"] == DBNull.Value ? null
+								: (int?)Convert.ToInt32(reader["gos_id"])
 							});
 						}
 					}
@@ -62,10 +66,12 @@ namespace academic_system
 			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
-				string sql = "INSERT INTO `groups` (name) VALUES (@name)";
+				string sql = "INSERT INTO `groups` (name, gos_id) VALUES (@name, @gosId)";
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
 					cmd.Parameters.AddWithValue("@name", group.Name);
+					cmd.Parameters.AddWithValue("@gosId", group.GosId.HasValue
+						? (object)group.GosId.Value : DBNull.Value);
 					cmd.ExecuteNonQuery();
 				}
 			}
@@ -75,11 +81,14 @@ namespace academic_system
 			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
-				string sql = "UPDATE `groups` SET name=@name WHERE group_id=@id";
+				string sql = "UPDATE `groups` SET name=@name, gos_id=@gosId WHERE group_id=@id";
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
 					cmd.Parameters.AddWithValue("@name", group.Name);
+					cmd.Parameters.AddWithValue("@gosId", group.GosId.HasValue
+						? (object)group.GosId.Value : DBNull.Value);
 					cmd.Parameters.AddWithValue("@id", group.GroupId);
+
 					cmd.ExecuteNonQuery();
 				}
 			}

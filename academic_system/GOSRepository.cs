@@ -7,8 +7,8 @@ using MySql.Data.MySqlClient;
 
 namespace academic_system
 {
-    public class GOSRepository : IGOSRepository
-    {
+	public class GOSRepository : IGOSRepository
+	{
 		private string connStr = "Server=localhost; Database=academic_system; Uid=root; Pwd=;";
 		public GroupOfSubjects GetById(int gosId)
 		{
@@ -26,7 +26,7 @@ namespace academic_system
 							return new GroupOfSubjects
 							{
 								GOSId = Convert.ToInt32(reader["gos_id"]),
-								GroupId = Convert.ToInt32(reader["group_id"]),
+								Name = reader["gos_name"].ToString(),
 								SubjectId = Convert.ToInt32(reader["subject_id"]),
 							};
 						}
@@ -36,40 +36,15 @@ namespace academic_system
 			return null;
 		}
 
-		public GroupOfSubjects GetByGroupId(int groupId)
-		{
-			using (var conn = new MySqlConnection(connStr)) //connection string
-			{
-				conn.Open();
-				string sql = "SELECT * FROM group_of_subjects WHERE group_id=@id LIMIT 1";
-				using (var cmd = new MySqlCommand(sql, conn))
-				{
-					cmd.Parameters.AddWithValue("@id", groupId); //replacement
-					using (var reader = cmd.ExecuteReader())
-					{
-						if (reader.Read())
-						{
-							return new GroupOfSubjects
-							{
-								GOSId = Convert.ToInt32(reader["gos_id"]),
-								GroupId = Convert.ToInt32(reader["group_id"]),
-								SubjectId = Convert.ToInt32(reader["subject_id"]),
-							};
-						}
-					}
-				}
-			}
-			return null;
-		}
 		public void Add(GroupOfSubjects gos)
 		{
 			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
-				string sql = "INSERT INTO group_of_subjects (group_id, subject_id) VALUES (@groupId, @subjectId)";
+				string sql = "INSERT INTO group_of_subjects (gos_name, subject_id) VALUES (@gosName, @subjectId)";
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
-					cmd.Parameters.AddWithValue("@groupId", gos.GroupId);
+					cmd.Parameters.AddWithValue("@gosName", gos.Name);
 					cmd.Parameters.AddWithValue("@subjectId", gos.SubjectId);
 					cmd.ExecuteNonQuery();
 				}
@@ -80,10 +55,10 @@ namespace academic_system
 			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
-				string sql = "UPDATE group_of_subjects SET group_id=@groupId, subject_id=@subjectId WHERE gos_id=@id";
+				string sql = "UPDATE group_of_subjects SET gos_name=@gosName, subject_id=@subjectId WHERE gos_id=@id";
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
-					cmd.Parameters.AddWithValue("@groupId", gos.GroupId);
+					cmd.Parameters.AddWithValue("@gosName", gos.Name);
 					cmd.Parameters.AddWithValue("@subjectId", gos.SubjectId);
 					cmd.Parameters.AddWithValue("@id", gos.GOSId);
 					cmd.ExecuteNonQuery();
@@ -118,5 +93,33 @@ namespace academic_system
 				}
 			}
 		}
-	}
+		public List<GroupOfSubjects> GetAll()
+		{
+			var result = new List<GroupOfSubjects>();
+
+			using (var conn = new MySqlConnection(connStr))
+			{
+				conn.Open();
+				string sql = "SELECT * FROM group_of_subjects";
+
+				using (var cmd = new MySqlCommand(sql, conn))
+				{
+					using (var reader = cmd.ExecuteReader())
+					{
+						while (reader.Read())
+						{
+							result.Add(new GroupOfSubjects
+							{
+								GOSId = Convert.ToInt32(reader["gos_id"]),
+								Name = reader["gos_name"].ToString(),
+								SubjectId = Convert.ToInt32(reader["subject_id"])
+							});
+						}
+					}
+				}
+			}
+
+			return result;
+		}
+	}	
 }

@@ -136,6 +136,12 @@
     <Compile Include="ManageStudentGroupsForm.Designer.cs">
       <DependentUpon>ManageStudentGroupsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageSubjectGroupsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageSubjectGroupsForm.Designer.cs">
+      <DependentUpon>ManageSubjectGroupsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageSubjectsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,12 @@
     <Compile Include="SubjectEditorForm.Designer.cs">
       <DependentUpon>SubjectEditorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubjectGroupsEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectGroupsEditorForm.Designer.cs">
+      <DependentUpon>SubjectGroupsEditorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubjectRepository.cs" />
     <Compile Include="Teacher.cs" />
     <Compile Include="TeacherEditorForm.cs">
@@ -202,6 +214,9 @@
     <EmbeddedResource Include="ManageStudentGroupsForm.resx">
       <DependentUpon>ManageStudentGroupsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageSubjectGroupsForm.resx">
+      <DependentUpon>ManageSubjectGroupsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageSubjectsForm.resx">
       <DependentUpon>ManageSubjectsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubjectEditorForm.resx">
       <DependentUpon>SubjectEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectGroupsEditorForm.resx">
+      <DependentUpon>SubjectGroupsEditorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherEditorForm.resx">
       <DependentUpon>TeacherEditorForm.cs</DependentUpon>

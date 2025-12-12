@@ -42,7 +42,8 @@ namespace academic_system
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            var form = new ManageSubjectGroupsForm(manager);
+            form.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)

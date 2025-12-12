@@ -27,11 +27,11 @@ namespace academic_system
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-			var editor = new StudentGroupsEditorForm("Create Group");
+			var editor = new StudentGroupsEditorForm("Create Group", manager);
 
 			if (editor.ShowDialog() == DialogResult.OK)
 			{
-				manager.CreateGroup(editor.GroupName);
+				manager.CreateGroup(editor.GroupName, editor.SelectedGosId);
 				LoadGroups();
 			}
 		}
@@ -49,13 +49,14 @@ namespace academic_system
 
 			Group group = manager.GetGroupById(groupId);
 
-			var editor = new StudentGroupsEditorForm("Update Group", group);
+			var editor = new StudentGroupsEditorForm("Update Group", manager, group);
 
 			if (editor.ShowDialog() == DialogResult.OK)
 			{
 				manager.UpdateGroup(
 					groupId,
-					editor.GroupName
+					editor.GroupName,
+					editor.SelectedGosId
 				);
 
 				LoadGroups();

@@ -109,5 +109,10 @@ namespace academic_system
 			DialogResult = DialogResult.Cancel;
 			Close();
 		}
+
+        private void cmbTeacher_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -3,28 +3,8 @@
   "WorkspaceRootPath": "D:\\coding\\academic_system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\managestudentgroupsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\managestudentgroupsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\managestudentgroupsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\managestudentgroupsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|D:\\coding\\academic_system\\academic_system\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\adminmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\adminmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\manageteachersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\manageteachersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,83 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "AdminDashboard.cs",
               "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\AdminDashboard.cs",
               "RelativeDocumentMoniker": "academic_system\\AdminDashboard.cs",
               "ToolTip": "D:\\coding\\academic_system\\academic_system\\AdminDashboard.cs",
               "RelativeToolTip": "academic_system\\AdminDashboard.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAcwD4AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAAEEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T15:46:44.14Z",
+              "WhenOpened": "2025-12-12T13:23:59.419Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdminManager.cs",
-              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\AdminManager.cs",
-              "RelativeDocumentMoniker": "academic_system\\AdminManager.cs",
-              "ToolTip": "D:\\coding\\academic_system\\academic_system\\AdminManager.cs",
-              "RelativeToolTip": "academic_system\\AdminManager.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAWwIYAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T15:37:41.299Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ManageTeachersForm.cs",
-              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\ManageTeachersForm.cs",
-              "RelativeDocumentMoniker": "academic_system\\ManageTeachersForm.cs",
-              "ToolTip": "D:\\coding\\academic_system\\academic_system\\ManageTeachersForm.cs",
-              "RelativeToolTip": "academic_system\\ManageTeachersForm.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAAAFgAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T15:35:37.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ManageStudentGroupsForm.cs",
-              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\ManageStudentGroupsForm.cs",
-              "RelativeDocumentMoniker": "academic_system\\ManageStudentGroupsForm.cs",
-              "ToolTip": "D:\\coding\\academic_system\\academic_system\\ManageStudentGroupsForm.cs",
-              "RelativeToolTip": "academic_system\\ManageStudentGroupsForm.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAAAFgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T15:15:30.174Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ManageStudentGroupsForm.cs [Design]",
-              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\ManageStudentGroupsForm.cs",
-              "RelativeDocumentMoniker": "academic_system\\ManageStudentGroupsForm.cs",
-              "ToolTip": "D:\\coding\\academic_system\\academic_system\\ManageStudentGroupsForm.cs [Design]",
-              "RelativeToolTip": "academic_system\\ManageStudentGroupsForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T15:13:49.287Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdminDashboard.cs [Design]",
-              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\AdminDashboard.cs",
-              "RelativeDocumentMoniker": "academic_system\\AdminDashboard.cs",
-              "ToolTip": "D:\\coding\\academic_system\\academic_system\\AdminDashboard.cs [Design]",
-              "RelativeToolTip": "academic_system\\AdminDashboard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T15:53:35.402Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

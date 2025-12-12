@@ -32,6 +32,8 @@
 			this.txtName = new System.Windows.Forms.TextBox();
 			this.btnSave = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
+			this.cmbGOS = new System.Windows.Forms.ComboBox();
+			this.labelGOS = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// labelName
@@ -52,7 +54,7 @@
 			// 
 			// btnSave
 			// 
-			this.btnSave.Location = new System.Drawing.Point(449, 217);
+			this.btnSave.Location = new System.Drawing.Point(412, 252);
 			this.btnSave.Name = "btnSave";
 			this.btnSave.Size = new System.Drawing.Size(147, 54);
 			this.btnSave.TabIndex = 2;
@@ -62,7 +64,7 @@
 			// 
 			// btnCancel
 			// 
-			this.btnCancel.Location = new System.Drawing.Point(270, 217);
+			this.btnCancel.Location = new System.Drawing.Point(233, 252);
 			this.btnCancel.Name = "btnCancel";
 			this.btnCancel.Size = new System.Drawing.Size(147, 54);
 			this.btnCancel.TabIndex = 3;
@@ -70,11 +72,30 @@
 			this.btnCancel.UseVisualStyleBackColor = true;
 			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 			// 
+			// cmbGOS
+			// 
+			this.cmbGOS.FormattingEnabled = true;
+			this.cmbGOS.Location = new System.Drawing.Point(320, 200);
+			this.cmbGOS.Name = "cmbGOS";
+			this.cmbGOS.Size = new System.Drawing.Size(258, 33);
+			this.cmbGOS.TabIndex = 4;
+			// 
+			// labelGOS
+			// 
+			this.labelGOS.AutoSize = true;
+			this.labelGOS.Location = new System.Drawing.Point(106, 203);
+			this.labelGOS.Name = "labelGOS";
+			this.labelGOS.Size = new System.Drawing.Size(181, 25);
+			this.labelGOS.TabIndex = 5;
+			this.labelGOS.Text = "Group of subjects";
+			// 
 			// StudentGroupsEditorForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.labelGOS);
+			this.Controls.Add(this.cmbGOS);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.btnSave);
 			this.Controls.Add(this.txtName);
@@ -92,5 +113,7 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ComboBox cmbGOS;
+        private System.Windows.Forms.Label labelGOS;
     }
 }

@@ -10,5 +10,6 @@ namespace academic_system
     {
         public int GroupId { get; set; }
         public string Name { get; set; }
+        public int? GosId { get; set; }
     }
 }

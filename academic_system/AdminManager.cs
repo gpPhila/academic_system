@@ -140,11 +140,18 @@ namespace academic_system
 		{
 			return teacherRepository.GetAll();
 		}
-		public void CreateGroup(string name)
+
+		public List<GroupOfSubjects> GetAllGOS() 
+		{
+			return gOSRepository.GetAll();
+		}
+
+		public void CreateGroup(string name, int? gosId)
 		{
 			var group = new Group
 			{
-				Name = name
+				Name = name,
+				GosId = gosId
 			};
 
 			groupRepository.Add(group);
@@ -155,12 +162,13 @@ namespace academic_system
 			return groupRepository.GetById(groupId);
 		}
 
-		public void UpdateGroup(int groupId, string name)
+		public void UpdateGroup(int groupId, string name, int? gosId)
 		{
 			var group = new Group
 			{
 				GroupId = groupId,
-				Name = name
+				Name = name,
+				GosId= gosId
 			};
 
 			groupRepository.Update(group);
@@ -206,10 +214,11 @@ namespace academic_system
 		{
 			subjectRepository.AssignTeacherToSubject(subjectId, teacherId);
 		}
+		/*
 		public void AssignSubjectToGroup(int groupId, int subjectId)
 		{
 			gOSRepository.AssignSubjectToGroup(groupId, subjectId);
 		}
-
+		*/
 	}
 }

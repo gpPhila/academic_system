@@ -9,7 +9,8 @@ namespace academic_system
     public interface IGOSRepository : IBaseRepository<GroupOfSubjects>
     {
         GroupOfSubjects GetById(int gosId);
-        GroupOfSubjects GetByGroupId(int groupId);
+        List <GroupOfSubjects> GetAll();
+       // GroupOfSubjects GetByGroupId(int groupId);
         void AssignSubjectToGroup(int groupId, int subjectId);
     }
 }
