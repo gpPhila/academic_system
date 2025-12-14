@@ -33,6 +33,7 @@
 			this.btnCreate = new System.Windows.Forms.Button();
 			this.btnUpdate = new System.Windows.Forms.Button();
 			this.btnDelete = new System.Windows.Forms.Button();
+			this.btnAddSubjects = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgvSubjectGroups)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -58,7 +59,7 @@
 			// 
 			// btnCreate
 			// 
-			this.btnCreate.Location = new System.Drawing.Point(850, 340);
+			this.btnCreate.Location = new System.Drawing.Point(855, 335);
 			this.btnCreate.Name = "btnCreate";
 			this.btnCreate.Size = new System.Drawing.Size(290, 69);
 			this.btnCreate.TabIndex = 2;
@@ -68,7 +69,7 @@
 			// 
 			// btnUpdate
 			// 
-			this.btnUpdate.Location = new System.Drawing.Point(850, 437);
+			this.btnUpdate.Location = new System.Drawing.Point(855, 428);
 			this.btnUpdate.Name = "btnUpdate";
 			this.btnUpdate.Size = new System.Drawing.Size(290, 69);
 			this.btnUpdate.TabIndex = 3;
@@ -78,7 +79,7 @@
 			// 
 			// btnDelete
 			// 
-			this.btnDelete.Location = new System.Drawing.Point(850, 532);
+			this.btnDelete.Location = new System.Drawing.Point(855, 610);
 			this.btnDelete.Name = "btnDelete";
 			this.btnDelete.Size = new System.Drawing.Size(290, 69);
 			this.btnDelete.TabIndex = 4;
@@ -86,11 +87,22 @@
 			this.btnDelete.UseVisualStyleBackColor = true;
 			this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
 			// 
+			// btnAddSubjects
+			// 
+			this.btnAddSubjects.Location = new System.Drawing.Point(855, 518);
+			this.btnAddSubjects.Name = "btnAddSubjects";
+			this.btnAddSubjects.Size = new System.Drawing.Size(290, 69);
+			this.btnAddSubjects.TabIndex = 5;
+			this.btnAddSubjects.Text = "Add subjects";
+			this.btnAddSubjects.UseVisualStyleBackColor = true;
+			this.btnAddSubjects.Click += new System.EventHandler(this.btnAddSubjects_Click);
+			// 
 			// ManageSubjectGroupsForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1208, 794);
+			this.Controls.Add(this.btnAddSubjects);
 			this.Controls.Add(this.btnDelete);
 			this.Controls.Add(this.btnUpdate);
 			this.Controls.Add(this.btnCreate);
@@ -111,5 +123,6 @@
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnAddSubjects;
     }
 }

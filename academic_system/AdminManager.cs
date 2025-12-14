@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using academic_system;
 
 namespace academic_system
@@ -16,7 +18,8 @@ namespace academic_system
             IGroupRepository groupRepository,
             ISubjectRepository subjectRepository,
             IGOSRepository gOSRepository,
-            IGradeRepository gradeRepository) : base(userRepository, studentRepository, teacherRepository, groupRepository, subjectRepository, gOSRepository, gradeRepository)
+            IGradeRepository gradeRepository,
+			IGOSSRepository gOSSRepository) : base(userRepository, studentRepository, teacherRepository, groupRepository, subjectRepository, gOSRepository, gradeRepository, gOSSRepository)
         {}
 		public List<User> GetAllUsers()
 		{
@@ -65,6 +68,10 @@ namespace academic_system
 
 			studentRepository.Add(student);
 		}
+		public Student GetStudentById(int studentId)
+		{
+			return studentRepository.GetById(studentId);
+		}
 		public void UpdateStudent(int studentId, int groupId, string firstName, string lastName)
 		{
 			var student = new Student
@@ -79,7 +86,11 @@ namespace academic_system
 		}
 		public void DeleteStudent(int studentId)
 		{
+			Student s = studentRepository.GetById(studentId);
+			int userId = s.UserId;
+		
 			studentRepository.Delete(studentId);
+			userRepository.Delete(userId);
 		}
 		public void AssignStudentToGroup(int studentId, int groupId)
 		{
@@ -156,7 +167,6 @@ namespace academic_system
 
 			groupRepository.Add(group);
 		}
-
 		public Group GetGroupById(int groupId)
 		{
 			return groupRepository.GetById(groupId);
@@ -177,6 +187,58 @@ namespace academic_system
 		public void DeleteGroup(int groupId)
 		{
 			groupRepository.Delete(groupId);
+		}
+
+		public void CreateGOS(string name)
+		{
+			var gos = new GroupOfSubjects
+			{
+				Name = name
+			};
+
+			gOSRepository.Add(gos);
+		}
+
+		public GroupOfSubjects GetGOSById(int gosId)
+		{
+			return gOSRepository.GetById(gosId);
+		}
+
+		public void UpdateGOS(int gosId, string name)
+		{
+			var gos = new GroupOfSubjects
+			{
+				GOSId = gosId,
+				Name = name
+			};
+
+			GOSRepository.Update(gos);
+		}
+		public void DeleteGOS(int gosId)
+		{
+			gOSRepository.Delete(gosId);
+		}
+		public void AddGOSS(int gosId, int subjectId)
+		{
+			var goss = new GOS_Subject
+			{
+				GosId = gosId,
+				SubjectId = subjectId
+			};
+
+			gOSSRepository.Add(goss);
+		}
+		public void DeleteGOSS(int gossid)
+		{
+			gOSSRepository.Delete(gossid);
+		}
+		public List <GOS_Subject> GetGOSSByGosId(int gosId)
+		{
+			return gOSSRepository.GetByGosId(gosId);
+		}
+		public DataTable GetGOSSByGosIdWithSubjectName(int gosId)
+		{
+			return gOSSRepository.GetByGosIdWithSubjectName(gosId);
 		}
 		public void CreateSubject(string name, string description, int teacherId)
 		{

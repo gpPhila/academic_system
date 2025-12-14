@@ -10,7 +10,5 @@ namespace academic_system
     {
         GroupOfSubjects GetById(int gosId);
         List <GroupOfSubjects> GetAll();
-       // GroupOfSubjects GetByGroupId(int groupId);
-        void AssignSubjectToGroup(int groupId, int subjectId);
     }
 }

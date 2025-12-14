@@ -16,7 +16,8 @@ namespace academic_system
 		   IGroupRepository groupRepository,
 		   ISubjectRepository subjectRepository,
 		   IGOSRepository gOSRepository,
-		   IGradeRepository gradeRepository) : base(userRepository, studentRepository, teacherRepository, groupRepository, subjectRepository, gOSRepository, gradeRepository)
+		   IGradeRepository gradeRepository,
+		   IGOSSRepository gOSSRepository) : base(userRepository, studentRepository, teacherRepository, groupRepository, subjectRepository, gOSRepository, gradeRepository, gOSSRepository)
 		{ }
 		public List<Grade> ViewGradesByStudent(int studentId)
 		{

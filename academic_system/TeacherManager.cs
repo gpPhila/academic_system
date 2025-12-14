@@ -15,7 +15,8 @@ namespace academic_system
 		   IGroupRepository groupRepository,
 		   ISubjectRepository subjectRepository,
 		   IGOSRepository gOSRepository,
-		   IGradeRepository gradeRepository) : base(userRepository, studentRepository, teacherRepository, groupRepository, subjectRepository, gOSRepository, gradeRepository)
+		   IGradeRepository gradeRepository,
+		   IGOSSRepository gOSSRepository) : base(userRepository, studentRepository, teacherRepository, groupRepository, subjectRepository, gOSRepository, gradeRepository, gOSSRepository)
 		{}
 		public void AddGrade(int studentId, int subjectId, int teacherId, string value)
 		{

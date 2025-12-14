@@ -105,5 +105,10 @@ namespace academic_system
 			DialogResult = DialogResult.Cancel;
 			Close();
 		}
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

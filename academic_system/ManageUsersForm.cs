@@ -23,22 +23,6 @@ namespace academic_system
 			
 		}
 
-        private void btnCreate_Click(object sender, EventArgs e)
-        {
-			var editor = new UserEditorForm("Create");
-
-			if (editor.ShowDialog() == DialogResult.OK)
-			{
-				manager.CreateUser(
-					editor.LoginValue,
-					editor.PasswordValue,
-					editor.RoleValue
-				);
-				LoadUsers();
-			}
-		}
-
-
 		private void btnUpdate_Click(object sender, EventArgs e)
         {
 
@@ -67,37 +51,11 @@ namespace academic_system
 					userId,
 					editor.LoginValue,
 					editor.PasswordValue,
-					editor.RoleValue
+					existingUser.Role
 				);
 
 				LoadUsers();
 			}
-		}
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-			if (dgvUsers.SelectedRows.Count == 0)
-			{
-				MessageBox.Show("Select a user first.");
-				return;
-			}
-
-			var confirm = MessageBox.Show(
-			"Are you sure you want to delete this user?",
-			"Confirm Delete",
-			MessageBoxButtons.YesNo,
-			MessageBoxIcon.Warning);
-
-			if (confirm != DialogResult.Yes)
-				return;
-
-			var row = dgvUsers.SelectedRows[0];
-			int userId = (int)row.Cells["UserId"].Value;
-
-			manager.DeleteUser(userId);
-
-			MessageBox.Show("User deleted!");
-			LoadUsers();
 		}
 
         private void ManageUsersForm_Load(object sender, EventArgs e)

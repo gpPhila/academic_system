@@ -26,8 +26,7 @@ namespace academic_system
 							return new GroupOfSubjects
 							{
 								GOSId = Convert.ToInt32(reader["gos_id"]),
-								Name = reader["gos_name"].ToString(),
-								SubjectId = Convert.ToInt32(reader["subject_id"]),
+								Name = reader["gos_name"].ToString()
 							};
 						}
 					}
@@ -41,11 +40,10 @@ namespace academic_system
 			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
-				string sql = "INSERT INTO group_of_subjects (gos_name, subject_id) VALUES (@gosName, @subjectId)";
+				string sql = "INSERT INTO group_of_subjects (gos_name) VALUES (@gosName)";
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
 					cmd.Parameters.AddWithValue("@gosName", gos.Name);
-					cmd.Parameters.AddWithValue("@subjectId", gos.SubjectId);
 					cmd.ExecuteNonQuery();
 				}
 			}
@@ -55,11 +53,10 @@ namespace academic_system
 			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
-				string sql = "UPDATE group_of_subjects SET gos_name=@gosName, subject_id=@subjectId WHERE gos_id=@id";
+				string sql = "UPDATE group_of_subjects SET gos_name=@gosName WHERE gos_id=@id";
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
 					cmd.Parameters.AddWithValue("@gosName", gos.Name);
-					cmd.Parameters.AddWithValue("@subjectId", gos.SubjectId);
 					cmd.Parameters.AddWithValue("@id", gos.GOSId);
 					cmd.ExecuteNonQuery();
 				}
@@ -78,6 +75,7 @@ namespace academic_system
 				}
 			}
 		}
+		/*
 		public void AssignSubjectToGroup(int groupId, int subjectId)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -93,6 +91,7 @@ namespace academic_system
 				}
 			}
 		}
+		*/
 		public List<GroupOfSubjects> GetAll()
 		{
 			var result = new List<GroupOfSubjects>();
@@ -111,8 +110,7 @@ namespace academic_system
 							result.Add(new GroupOfSubjects
 							{
 								GOSId = Convert.ToInt32(reader["gos_id"]),
-								Name = reader["gos_name"].ToString(),
-								SubjectId = Convert.ToInt32(reader["subject_id"])
+								Name = reader["gos_name"].ToString()
 							});
 						}
 					}

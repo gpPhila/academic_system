@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace academic_system
 {
-    public class GroupOfSubjects
+    public class GOS_Subject
     {
-        public int GOSId { get; set; }
-        public string Name { get; set; }
-    }
+			public int GossId { get; set; }
+			public int GosId { get; set; }
+			public int SubjectId { get; set; }
+	}
 }

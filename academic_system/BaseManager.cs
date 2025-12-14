@@ -17,8 +17,8 @@ namespace academic_system
 		protected readonly ISubjectRepository subjectRepository;
 		protected readonly IGOSRepository gOSRepository;
 		protected readonly IGradeRepository gradeRepository;
+		protected readonly IGOSSRepository gOSSRepository;
 
-		// constructor
 		public BaseManager(
 			IUserRepository userRepository,
 			IStudentRepository studentRepository,
@@ -26,7 +26,8 @@ namespace academic_system
 			IGroupRepository groupRepository,
 			ISubjectRepository subjectRepository,
 			IGOSRepository gOSRepository,
-			IGradeRepository gradeRepository)
+			IGradeRepository gradeRepository,
+			IGOSSRepository gOSSRepository)
 		{
 			this.userRepository = userRepository;
 			this.studentRepository = studentRepository;
@@ -35,6 +36,7 @@ namespace academic_system
 			this.subjectRepository = subjectRepository;
 			this.gOSRepository = gOSRepository;
 			this.gradeRepository = gradeRepository;
+			this.gOSSRepository = gOSSRepository;
 		}
 		public IUserRepository UserRepository => userRepository;
 		public IStudentRepository StudentRepository => studentRepository;
@@ -43,6 +45,7 @@ namespace academic_system
 		public ISubjectRepository SubjectRepository => subjectRepository;
 		public IGOSRepository GOSRepository => gOSRepository;
 		public IGradeRepository GradeRepository => gradeRepository;
+		public IGOSSRepository GOSSRepository => gOSSRepository;
 
 		/*
 		public User GetUserById(int id)

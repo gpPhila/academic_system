@@ -92,3 +92,7 @@ D:\coding\academic_system\academic_system\obj\Debug\academic_system.ManageStuden
 D:\coding\academic_system\academic_system\obj\Debug\academic_system.StudentGroupsEditorForm.resources
 D:\coding\academic_system\academic_system\obj\Debug\academic_system.ManageSubjectGroupsForm.resources
 D:\coding\academic_system\academic_system\obj\Debug\academic_system.SubjectGroupsEditorForm.resources
+D:\coding\academic_system\academic_system\obj\Debug\academic_system.StudentDashboard.resources
+D:\coding\academic_system\academic_system\obj\Debug\academic_system.SubjectGroupContentForm.resources
+D:\coding\academic_system\academic_system\obj\Debug\academic_system.ManageStudentsForm.resources
+D:\coding\academic_system\academic_system\obj\Debug\academic_system.StudentEditorForm.resources

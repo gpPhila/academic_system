@@ -30,9 +30,7 @@
         {
 			this.label1 = new System.Windows.Forms.Label();
 			this.dgvUsers = new System.Windows.Forms.DataGridView();
-			this.btnCreate = new System.Windows.Forms.Button();
 			this.btnUpdate = new System.Windows.Forms.Button();
-			this.btnDelete = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -49,27 +47,17 @@
 			// dgvUsers
 			// 
 			this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvUsers.Location = new System.Drawing.Point(34, 287);
+			this.dgvUsers.Location = new System.Drawing.Point(96, 248);
 			this.dgvUsers.Name = "dgvUsers";
 			this.dgvUsers.RowHeadersWidth = 82;
 			this.dgvUsers.RowTemplate.Height = 33;
-			this.dgvUsers.Size = new System.Drawing.Size(753, 460);
+			this.dgvUsers.Size = new System.Drawing.Size(1128, 460);
 			this.dgvUsers.TabIndex = 1;
 			this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
 			// 
-			// btnCreate
-			// 
-			this.btnCreate.Location = new System.Drawing.Point(885, 414);
-			this.btnCreate.Name = "btnCreate";
-			this.btnCreate.Size = new System.Drawing.Size(327, 43);
-			this.btnCreate.TabIndex = 9;
-			this.btnCreate.Text = "Create new";
-			this.btnCreate.UseVisualStyleBackColor = true;
-			this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
-			// 
 			// btnUpdate
 			// 
-			this.btnUpdate.Location = new System.Drawing.Point(885, 477);
+			this.btnUpdate.Location = new System.Drawing.Point(897, 731);
 			this.btnUpdate.Name = "btnUpdate";
 			this.btnUpdate.Size = new System.Drawing.Size(327, 43);
 			this.btnUpdate.TabIndex = 10;
@@ -77,24 +65,12 @@
 			this.btnUpdate.UseVisualStyleBackColor = true;
 			this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
 			// 
-			// btnDelete
-			// 
-			this.btnDelete.Location = new System.Drawing.Point(885, 542);
-			this.btnDelete.Name = "btnDelete";
-			this.btnDelete.Size = new System.Drawing.Size(327, 43);
-			this.btnDelete.TabIndex = 11;
-			this.btnDelete.Text = "Delete";
-			this.btnDelete.UseVisualStyleBackColor = true;
-			this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-			// 
 			// ManageUsersForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1302, 814);
-			this.Controls.Add(this.btnDelete);
 			this.Controls.Add(this.btnUpdate);
-			this.Controls.Add(this.btnCreate);
 			this.Controls.Add(this.dgvUsers);
 			this.Controls.Add(this.label1);
 			this.Name = "ManageUsersForm";
@@ -110,8 +86,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvUsers;
-        private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnDelete;
     }
 }
