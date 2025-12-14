@@ -52,10 +52,6 @@ namespace academic_system
 			{
 				MessageBox.Show("Welcome, teacher!");
 			}
-			else if (user.Role == "student")
-			{
-				MessageBox.Show("Welcome student!");
-			}
 
 			var userRepository = new UserRepository();
 			var studentRepository = new StudentRepository();
@@ -67,6 +63,8 @@ namespace academic_system
 			var gossRepository = new GOSSRepository();
 
 			AdminManager manager;
+			StudentManager studentManager;
+			Student currentStudent;
 
 			switch (user.Role)
 			{
@@ -83,20 +81,23 @@ namespace academic_system
 				this.Hide();
 				adminForm.Show();
 				break;
-				/*
-				case: "student":
-					manager = new StudentManager(userRepository,
+				
+				case "student":
+					studentManager = new StudentManager(userRepository,
 					studentRepository,
 					teacherRepository,
 					groupRepository,
 					subjectRepository,
 					gosRepository,
-					gradeRepository);
-					var studentForm = new StudentDashboard(manager, user);
+					gradeRepository,
+					gossRepository);
+					currentStudent = studentRepository.GetByUserId(user.UserId);
+
+					var studentForm = new StudentDashboard(studentManager, user, currentStudent);
 					this.Hide();
 					studentForm.Show();
 				break;
-				*/
+				
 			}
 		}
     }

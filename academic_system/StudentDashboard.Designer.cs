@@ -33,6 +33,11 @@
 			this.btnLogOut = new System.Windows.Forms.Button();
 			this.labelStudentInfo = new System.Windows.Forms.Label();
 			this.labelStudentSubjects = new System.Windows.Forms.Label();
+			this.txtFirstName = new System.Windows.Forms.TextBox();
+			this.txtLastName = new System.Windows.Forms.TextBox();
+			this.txtGroup = new System.Windows.Forms.TextBox();
+			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -47,21 +52,23 @@
 			// 
 			// btnManageAcc
 			// 
-			this.btnManageAcc.Location = new System.Drawing.Point(816, 158);
+			this.btnManageAcc.Location = new System.Drawing.Point(820, 193);
 			this.btnManageAcc.Name = "btnManageAcc";
 			this.btnManageAcc.Size = new System.Drawing.Size(225, 45);
 			this.btnManageAcc.TabIndex = 1;
 			this.btnManageAcc.Text = "Manage account";
 			this.btnManageAcc.UseVisualStyleBackColor = true;
+			this.btnManageAcc.Click += new System.EventHandler(this.btnManageAcc_Click);
 			// 
 			// btnLogOut
 			// 
-			this.btnLogOut.Location = new System.Drawing.Point(816, 209);
+			this.btnLogOut.Location = new System.Drawing.Point(820, 244);
 			this.btnLogOut.Name = "btnLogOut";
 			this.btnLogOut.Size = new System.Drawing.Size(225, 45);
 			this.btnLogOut.TabIndex = 2;
 			this.btnLogOut.Text = "Log out";
 			this.btnLogOut.UseVisualStyleBackColor = true;
+			this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
 			// 
 			// labelStudentInfo
 			// 
@@ -75,17 +82,52 @@
 			// labelStudentSubjects
 			// 
 			this.labelStudentSubjects.AutoSize = true;
-			this.labelStudentSubjects.Location = new System.Drawing.Point(338, 158);
+			this.labelStudentSubjects.Location = new System.Drawing.Point(273, 158);
 			this.labelStudentSubjects.Name = "labelStudentSubjects";
-			this.labelStudentSubjects.Size = new System.Drawing.Size(101, 25);
+			this.labelStudentSubjects.Size = new System.Drawing.Size(88, 25);
 			this.labelStudentSubjects.TabIndex = 4;
-			this.labelStudentSubjects.Text = "Subjects:";
+			this.labelStudentSubjects.Text = "Grades:";
+			// 
+			// txtFirstName
+			// 
+			this.txtFirstName.Location = new System.Drawing.Point(37, 195);
+			this.txtFirstName.Name = "txtFirstName";
+			this.txtFirstName.Size = new System.Drawing.Size(196, 31);
+			this.txtFirstName.TabIndex = 5;
+			// 
+			// txtLastName
+			// 
+			this.txtLastName.Location = new System.Drawing.Point(38, 232);
+			this.txtLastName.Name = "txtLastName";
+			this.txtLastName.Size = new System.Drawing.Size(196, 31);
+			this.txtLastName.TabIndex = 6;
+			// 
+			// txtGroup
+			// 
+			this.txtGroup.Location = new System.Drawing.Point(38, 269);
+			this.txtGroup.Name = "txtGroup";
+			this.txtGroup.Size = new System.Drawing.Size(196, 31);
+			this.txtGroup.TabIndex = 7;
+			// 
+			// dataGridView1
+			// 
+			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Location = new System.Drawing.Point(278, 195);
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.RowHeadersWidth = 82;
+			this.dataGridView1.RowTemplate.Height = 33;
+			this.dataGridView1.Size = new System.Drawing.Size(504, 420);
+			this.dataGridView1.TabIndex = 8;
 			// 
 			// StudentDashboard
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1081, 649);
+			this.Controls.Add(this.dataGridView1);
+			this.Controls.Add(this.txtGroup);
+			this.Controls.Add(this.txtLastName);
+			this.Controls.Add(this.txtFirstName);
 			this.Controls.Add(this.labelStudentSubjects);
 			this.Controls.Add(this.labelStudentInfo);
 			this.Controls.Add(this.btnLogOut);
@@ -93,6 +135,7 @@
 			this.Controls.Add(this.label1);
 			this.Name = "StudentDashboard";
 			this.Text = "StudentDashboard";
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -105,5 +148,9 @@
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Label labelStudentInfo;
         private System.Windows.Forms.Label labelStudentSubjects;
+        private System.Windows.Forms.TextBox txtFirstName;
+        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.TextBox txtGroup;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
