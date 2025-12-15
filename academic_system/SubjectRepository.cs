@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Security.Cryptography;
 using MySql.Data.MySqlClient;
 
 namespace academic_system
@@ -151,6 +153,39 @@ namespace academic_system
 				}
 			}
 		}
+
+		public DataTable GetSubjectsByGroup(int gosId)
+		{
+			var table = new DataTable();
+
+			using (var conn = new MySqlConnection(connStr))
+			{
+				conn.Open();
+
+				using (var cmd = new MySqlCommand())
+				{
+					cmd.Connection = conn;
+					cmd.CommandText = @"
+					SELECT 
+                    s.subject_id AS SubjectId,
+                    s.name_of_subject AS SubjectName
+					FROM group_of_subjects_subject goss
+					JOIN subject s ON s.subject_id = goss.subject_id
+					WHERE goss.gos_id = @gosId
+					";
+
+					cmd.Parameters.AddWithValue("@gosId", gosId);
+
+					using (var adapter = new MySqlDataAdapter(cmd))
+					{
+						adapter.Fill(table);
+					}
+				}
+			}
+
+			return table;
+		}
+
 	}
 }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,5 +14,7 @@ namespace academic_system
 		List<Student> GetAll();
 		List<Student> GetByGroupId(int groupId);
         void AssignStudentToGroup(int studentId, int groupId);
-    }
+        DataTable GetStudentsByGroupId(int groupId);
+
+	}
 }

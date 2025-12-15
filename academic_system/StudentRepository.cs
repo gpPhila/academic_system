@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -186,5 +187,36 @@ namespace academic_system
 				}
 			}
 		}
+
+		public DataTable GetStudentsByGroupId(int groupId)
+		{
+			var table = new DataTable();
+
+			using (var conn = new MySqlConnection(connStr))
+			{
+				conn.Open();
+
+				using (var cmd = new MySqlCommand())
+				{
+					cmd.Connection = conn;
+					cmd.CommandText = @"
+					SELECT 
+                    student_id AS StudentId,
+                    CONCAT(first_name, ' ', last_name) AS FullName
+					FROM student
+					WHERE group_id = @groupId
+					";
+
+					cmd.Parameters.AddWithValue("@groupId", groupId);
+
+					using (var adapter = new MySqlDataAdapter(cmd))
+					{
+						adapter.Fill(table);
+					}
+				}
+			}
+			return table;
+		}
+
 	}
 }

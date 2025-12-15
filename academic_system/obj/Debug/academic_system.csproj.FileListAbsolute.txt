@@ -96,3 +96,5 @@ D:\coding\academic_system\academic_system\obj\Debug\academic_system.StudentDashb
 D:\coding\academic_system\academic_system\obj\Debug\academic_system.SubjectGroupContentForm.resources
 D:\coding\academic_system\academic_system\obj\Debug\academic_system.ManageStudentsForm.resources
 D:\coding\academic_system\academic_system\obj\Debug\academic_system.StudentEditorForm.resources
+D:\coding\academic_system\academic_system\obj\Debug\academic_system.TeacherDashboard.resources
+D:\coding\academic_system\academic_system\obj\Debug\academic_system.GradeEditorForm.resources

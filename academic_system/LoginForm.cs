@@ -65,6 +65,8 @@ namespace academic_system
 			AdminManager manager;
 			StudentManager studentManager;
 			Student currentStudent;
+			TeacherManager teacherManager;
+			Teacher currentTeacher;
 
 			switch (user.Role)
 			{
@@ -91,13 +93,29 @@ namespace academic_system
 					gosRepository,
 					gradeRepository,
 					gossRepository);
-					currentStudent = studentRepository.GetByUserId(user.UserId);
 
+					currentStudent = studentRepository.GetByUserId(user.UserId);
 					var studentForm = new StudentDashboard(studentManager, user, currentStudent);
 					this.Hide();
 					studentForm.Show();
 				break;
-				
+
+				case "teacher":
+					teacherManager = new TeacherManager(userRepository,
+					studentRepository,
+					teacherRepository,
+					groupRepository,
+					subjectRepository,
+					gosRepository,
+					gradeRepository,
+					gossRepository);
+
+					currentTeacher = teacherRepository.GetByUserId(user.UserId);
+					var teacherForm = new TeacherDashboard(teacherManager, user, currentTeacher);
+					this.Hide();
+					teacherForm.Show();
+					break;
+
 			}
 		}
     }

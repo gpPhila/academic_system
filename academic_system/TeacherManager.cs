@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,5 +45,20 @@ namespace academic_system
 		{
 			return gradeRepository.GetByTeacherId(teacherId);
 		}
+		public DataTable GetSubjectsByGroup(int groupId)
+		{
+			return subjectRepository.GetSubjectsByGroup(groupId);
+		}
+
+		public DataTable GetStudentsByGroupId(int groupId)
+		{
+			return studentRepository.GetStudentsByGroupId(groupId);
+		}
+
+		public DataTable GetGrades(int studentId, int subjectId)
+		{
+			return gradeRepository.GetGrades(studentId, subjectId);
+		}
+
 	}
 }

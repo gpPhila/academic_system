@@ -47,13 +47,6 @@ namespace academic_system
 		public IGradeRepository GradeRepository => gradeRepository;
 		public IGOSSRepository GOSSRepository => gOSSRepository;
 
-		/*
-		public User GetUserById(int id)
-		{
-			return userRepository.GetById(id);
-		}
-		*/
-
 		public virtual void UpdatePasswordByUser(int userId, string newPassword)
 		{
 			userRepository.UpdatePassword(userId, newPassword);

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using MySql.Data.MySqlClient;
 
 namespace academic_system
@@ -156,5 +157,38 @@ namespace academic_system
 				}
 			}
 		}
+		public DataTable GetGrades(int studentId, int subjectId)
+		{
+			var table = new DataTable();
+
+			using (var conn = new MySqlConnection(connStr))
+			{
+				conn.Open();
+
+				using (var cmd = new MySqlCommand())
+				{
+					cmd.Connection = conn;
+					cmd.CommandText = @"
+                SELECT 
+                    grade_id AS GradeId,
+                    value AS Grade
+                FROM grade
+                WHERE student_id = @studentId
+                  AND subject_id = @subjectId
+            ";
+
+					cmd.Parameters.AddWithValue("@studentId", studentId);
+					cmd.Parameters.AddWithValue("@subjectId", subjectId);
+
+					using (var adapter = new MySqlDataAdapter(cmd))
+					{
+						adapter.Fill(table);
+					}
+				}
+			}
+
+			return table;
+		}
+
 	}
 }
