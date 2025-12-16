@@ -102,13 +102,20 @@ namespace academic_system
 				return;
 			}
 
-			int studentId =
-				(int)dgvStudent.SelectedRows[0].Cells["StudentId"].Value;
+			var studentRow = dgvStudent.SelectedRows[0];
+			var subjectRow = dgvSubject.SelectedRows[0];
 
-			int subjectId =
-				(int)dgvSubject.SelectedRows[0].Cells["SubjectId"].Value;
+			int studentId = (int)studentRow.Cells["StudentId"].Value;
+			int subjectId = (int)subjectRow.Cells["SubjectId"].Value;
 
-			var editor = new GradeEditorForm(manager, currentTeacher, selectedStudent, selectedSubject);
+			string studentFullName =
+			studentRow.Cells["FirstName"].Value + " " +
+			studentRow.Cells["LastName"].Value;
+
+			string subjectName =
+			subjectRow.Cells["SubjectName"].Value.ToString();
+
+			var editor = new GradeEditorForm(manager, studentId, subjectId, currentTeacher.TeacherId, studentFullName, subjectName);
 			editor.ShowDialog();
 		}
     }

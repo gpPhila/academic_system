@@ -13,7 +13,7 @@ namespace academic_system
         List <Grade> GetByStudentId(int studentId);
         List<Grade> GetByTeacherId(int subjectId);
         void UpdateValue(int gradeId, string newValue);
-        DataTable GetGrades(int studentId, int subjectId);
+        DataTable GetGrades(int studentId, int subjectId, int teacherId);
 
 	}
 }

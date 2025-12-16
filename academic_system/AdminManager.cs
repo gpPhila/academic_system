@@ -276,11 +276,5 @@ namespace academic_system
 		{
 			subjectRepository.AssignTeacherToSubject(subjectId, teacherId);
 		}
-		/*
-		public void AssignSubjectToGroup(int groupId, int subjectId)
-		{
-			gOSRepository.AssignSubjectToGroup(groupId, subjectId);
-		}
-		*/
 	}
 }

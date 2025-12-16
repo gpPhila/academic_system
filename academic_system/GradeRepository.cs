@@ -148,7 +148,7 @@ namespace academic_system
 			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
-				string sql = "UPDATE grade SET value=@value WHERE grade_id=@gradeId";
+				string sql = "UPDATE `grade` SET `value`=@value WHERE `grade_id`=@gradeId";
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
 					cmd.Parameters.AddWithValue("@value", newValue);
@@ -157,7 +157,7 @@ namespace academic_system
 				}
 			}
 		}
-		public DataTable GetGrades(int studentId, int subjectId)
+		public DataTable GetGrades(int studentId, int subjectId, int teacherId)
 		{
 			var table = new DataTable();
 
@@ -175,10 +175,12 @@ namespace academic_system
 					FROM grade
 					WHERE student_id = @studentId
 					AND subject_id = @subjectId
+					AND teacher_id = @teacherId
 					";
 
 					cmd.Parameters.AddWithValue("@studentId", studentId);
 					cmd.Parameters.AddWithValue("@subjectId", subjectId);
+					cmd.Parameters.AddWithValue("@teacherId", teacherId);
 
 					using (var adapter = new MySqlDataAdapter(cmd))
 					{
