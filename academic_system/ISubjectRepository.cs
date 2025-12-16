@@ -13,6 +13,6 @@ namespace academic_system
 		List<Subject> GetAll();
 		List<Subject> GetByTeacherId(int teacherId);
 		void AssignTeacherToSubject(int subjectId, int teacherId);
-		DataTable GetSubjectsByGroup(int groupId);
+		DataTable GetSubjectsByGroupAndTeacher(int groupId, int teacherId);
 	}
 }

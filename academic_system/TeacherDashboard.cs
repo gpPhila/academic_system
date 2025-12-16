@@ -15,6 +15,8 @@ namespace academic_system
 		private readonly TeacherManager manager;
 		private readonly User currentUser;
 		private readonly Teacher currentTeacher;
+		private readonly Student selectedStudent;
+		private readonly Subject selectedSubject;
 
 		private readonly GroupRepository groupRepository;
 		private readonly SubjectRepository subjectRepository;
@@ -35,12 +37,22 @@ namespace academic_system
 			txtFirstName.Text = currentTeacher.FirstName;
 			txtLastName.Text = currentTeacher.LastName;
 
+			dgvSubject.AllowUserToAddRows = false;
+
 			LoadGroups();
 		}
 
 		private void LoadGroups()
 		{
-			cmbGroups.DataSource = manager.GetAllGroups();
+			var groups = manager.GetAllGroups();
+
+			groups.Insert(0, new Group
+			{
+				GroupId = -1,
+				Name = "-- Select a group --"
+			});
+
+			cmbGroups.DataSource = groups;
 			cmbGroups.DisplayMember = "Name";
 			cmbGroups.ValueMember = "GroupId";
 		}
@@ -65,22 +77,20 @@ namespace academic_system
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
-			int groupId = (int)cmbGroups.SelectedValue;
-
-			dgvSubject.DataSource = manager.GetSubjectsByGroup(groupId);
-		}
-
-        private void btnShowStudents_Click(object sender, EventArgs e)
-        {
-			if (dgvSubject.SelectedRows.Count == 0)
+			if (cmbGroups.SelectedValue == null || (int)cmbGroups.SelectedValue == -1)
 			{
-				MessageBox.Show("Select a subject.");
+				MessageBox.Show("Select a group first.");
 				return;
 			}
 
 			int groupId = (int)cmbGroups.SelectedValue;
+			dgvSubject.DataSource = manager.GetSubjectsByGroupAndTeacher(groupId, currentTeacher.TeacherId);
+			dgvSubject.Columns["SubjectId"].Visible = false;
 
 			dgvStudent.DataSource = manager.GetStudentsByGroup(groupId);
+			dgvStudent.Columns["UserId"].Visible = false;
+			dgvStudent.Columns["GroupId"].Visible = false;
+			dgvStudent.Columns["StudentId"].Visible = false;
 		}
 
         private void btnGrade_Click(object sender, EventArgs e)
@@ -98,7 +108,7 @@ namespace academic_system
 			int subjectId =
 				(int)dgvSubject.SelectedRows[0].Cells["SubjectId"].Value;
 
-			var editor = new GradeEditorForm(studentId, subjectId);
+			var editor = new GradeEditorForm(manager, currentTeacher, selectedStudent, selectedSubject);
 			editor.ShowDialog();
 		}
     }

@@ -39,7 +39,6 @@
 			this.btnFilter = new System.Windows.Forms.Button();
 			this.dgvSubject = new System.Windows.Forms.DataGridView();
 			this.label2 = new System.Windows.Forms.Label();
-			this.btnShowStudents = new System.Windows.Forms.Button();
 			this.dgvStudent = new System.Windows.Forms.DataGridView();
 			this.labelStudents = new System.Windows.Forms.Label();
 			this.btnGrade = new System.Windows.Forms.Button();
@@ -51,7 +50,7 @@
 			// 
 			this.labelMain.AutoSize = true;
 			this.labelMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.labelMain.Location = new System.Drawing.Point(419, 98);
+			this.labelMain.Location = new System.Drawing.Point(455, 122);
 			this.labelMain.Name = "labelMain";
 			this.labelMain.Size = new System.Drawing.Size(350, 42);
 			this.labelMain.TabIndex = 0;
@@ -59,7 +58,7 @@
 			// 
 			// btnManage
 			// 
-			this.btnManage.Location = new System.Drawing.Point(25, 302);
+			this.btnManage.Location = new System.Drawing.Point(25, 492);
 			this.btnManage.Name = "btnManage";
 			this.btnManage.Size = new System.Drawing.Size(211, 53);
 			this.btnManage.TabIndex = 1;
@@ -69,7 +68,7 @@
 			// 
 			// btnLogOut
 			// 
-			this.btnLogOut.Location = new System.Drawing.Point(25, 370);
+			this.btnLogOut.Location = new System.Drawing.Point(25, 560);
 			this.btnLogOut.Name = "btnLogOut";
 			this.btnLogOut.Size = new System.Drawing.Size(211, 53);
 			this.btnLogOut.TabIndex = 2;
@@ -80,7 +79,7 @@
 			// labelInfo
 			// 
 			this.labelInfo.AutoSize = true;
-			this.labelInfo.Location = new System.Drawing.Point(28, 180);
+			this.labelInfo.Location = new System.Drawing.Point(28, 370);
 			this.labelInfo.Name = "labelInfo";
 			this.labelInfo.Size = new System.Drawing.Size(209, 25);
 			this.labelInfo.TabIndex = 3;
@@ -88,14 +87,14 @@
 			// 
 			// txtFirstName
 			// 
-			this.txtFirstName.Location = new System.Drawing.Point(25, 220);
+			this.txtFirstName.Location = new System.Drawing.Point(25, 410);
 			this.txtFirstName.Name = "txtFirstName";
 			this.txtFirstName.Size = new System.Drawing.Size(211, 31);
 			this.txtFirstName.TabIndex = 4;
 			// 
 			// txtLastName
 			// 
-			this.txtLastName.Location = new System.Drawing.Point(25, 257);
+			this.txtLastName.Location = new System.Drawing.Point(25, 447);
 			this.txtLastName.Name = "txtLastName";
 			this.txtLastName.Size = new System.Drawing.Size(211, 31);
 			this.txtLastName.TabIndex = 5;
@@ -103,7 +102,7 @@
 			// cmbGroups
 			// 
 			this.cmbGroups.FormattingEnabled = true;
-			this.cmbGroups.Location = new System.Drawing.Point(537, 218);
+			this.cmbGroups.Location = new System.Drawing.Point(25, 279);
 			this.cmbGroups.Name = "cmbGroups";
 			this.cmbGroups.Size = new System.Drawing.Size(242, 33);
 			this.cmbGroups.TabIndex = 6;
@@ -111,7 +110,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(532, 180);
+			this.label1.Location = new System.Drawing.Point(20, 241);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(88, 25);
 			this.label1.TabIndex = 8;
@@ -119,7 +118,7 @@
 			// 
 			// btnFilter
 			// 
-			this.btnFilter.Location = new System.Drawing.Point(537, 257);
+			this.btnFilter.Location = new System.Drawing.Point(25, 318);
 			this.btnFilter.Name = "btnFilter";
 			this.btnFilter.Size = new System.Drawing.Size(144, 39);
 			this.btnFilter.TabIndex = 9;
@@ -130,46 +129,36 @@
 			// dgvSubject
 			// 
 			this.dgvSubject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvSubject.Location = new System.Drawing.Point(279, 220);
+			this.dgvSubject.Location = new System.Drawing.Point(282, 279);
 			this.dgvSubject.Name = "dgvSubject";
 			this.dgvSubject.RowHeadersWidth = 82;
 			this.dgvSubject.RowTemplate.Height = 33;
-			this.dgvSubject.Size = new System.Drawing.Size(242, 482);
+			this.dgvSubject.Size = new System.Drawing.Size(366, 456);
 			this.dgvSubject.TabIndex = 10;
 			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(274, 179);
+			this.label2.Location = new System.Drawing.Point(277, 239);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(101, 25);
 			this.label2.TabIndex = 11;
 			this.label2.Text = "Subjects:";
 			// 
-			// btnShowStudents
-			// 
-			this.btnShowStudents.Location = new System.Drawing.Point(537, 649);
-			this.btnShowStudents.Name = "btnShowStudents";
-			this.btnShowStudents.Size = new System.Drawing.Size(211, 53);
-			this.btnShowStudents.TabIndex = 12;
-			this.btnShowStudents.Text = "Show students";
-			this.btnShowStudents.UseVisualStyleBackColor = true;
-			this.btnShowStudents.Click += new System.EventHandler(this.btnShowStudents_Click);
-			// 
 			// dgvStudent
 			// 
 			this.dgvStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvStudent.Location = new System.Drawing.Point(795, 218);
+			this.dgvStudent.Location = new System.Drawing.Point(676, 279);
 			this.dgvStudent.Name = "dgvStudent";
 			this.dgvStudent.RowHeadersWidth = 82;
 			this.dgvStudent.RowTemplate.Height = 33;
-			this.dgvStudent.Size = new System.Drawing.Size(242, 482);
+			this.dgvStudent.Size = new System.Drawing.Size(496, 456);
 			this.dgvStudent.TabIndex = 13;
 			// 
 			// labelStudents
 			// 
 			this.labelStudents.AutoSize = true;
-			this.labelStudents.Location = new System.Drawing.Point(790, 180);
+			this.labelStudents.Location = new System.Drawing.Point(671, 239);
 			this.labelStudents.Name = "labelStudents";
 			this.labelStudents.Size = new System.Drawing.Size(103, 25);
 			this.labelStudents.TabIndex = 14;
@@ -177,7 +166,7 @@
 			// 
 			// btnGrade
 			// 
-			this.btnGrade.Location = new System.Drawing.Point(1052, 649);
+			this.btnGrade.Location = new System.Drawing.Point(1043, 741);
 			this.btnGrade.Name = "btnGrade";
 			this.btnGrade.Size = new System.Drawing.Size(129, 53);
 			this.btnGrade.TabIndex = 15;
@@ -189,11 +178,10 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1193, 770);
+			this.ClientSize = new System.Drawing.Size(1231, 842);
 			this.Controls.Add(this.btnGrade);
 			this.Controls.Add(this.labelStudents);
 			this.Controls.Add(this.dgvStudent);
-			this.Controls.Add(this.btnShowStudents);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.dgvSubject);
 			this.Controls.Add(this.btnFilter);
@@ -228,7 +216,6 @@
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.DataGridView dgvSubject;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnShowStudents;
         private System.Windows.Forms.DataGridView dgvStudent;
         private System.Windows.Forms.Label labelStudents;
         private System.Windows.Forms.Button btnGrade;

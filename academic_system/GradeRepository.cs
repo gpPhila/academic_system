@@ -169,13 +169,13 @@ namespace academic_system
 				{
 					cmd.Connection = conn;
 					cmd.CommandText = @"
-                SELECT 
+					SELECT 
                     grade_id AS GradeId,
                     value AS Grade
-                FROM grade
-                WHERE student_id = @studentId
-                  AND subject_id = @subjectId
-            ";
+					FROM grade
+					WHERE student_id = @studentId
+					AND subject_id = @subjectId
+					";
 
 					cmd.Parameters.AddWithValue("@studentId", studentId);
 					cmd.Parameters.AddWithValue("@subjectId", subjectId);

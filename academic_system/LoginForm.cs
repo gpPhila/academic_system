@@ -48,11 +48,6 @@ namespace academic_system
 				return;
 			}
 
-			if (user.Role == "teacher")
-			{
-				MessageBox.Show("Welcome, teacher!");
-			}
-
 			var userRepository = new UserRepository();
 			var studentRepository = new StudentRepository();
 			var teacherRepository = new TeacherRepository();

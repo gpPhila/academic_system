@@ -154,7 +154,7 @@ namespace academic_system
 			}
 		}
 
-		public DataTable GetSubjectsByGroup(int gosId)
+		public DataTable GetSubjectsByGroupAndTeacher(int groupId, int teacherId)
 		{
 			var table = new DataTable();
 
@@ -166,15 +166,22 @@ namespace academic_system
 				{
 					cmd.Connection = conn;
 					cmd.CommandText = @"
-					SELECT 
+					SELECT DISTINCT
                     s.subject_id AS SubjectId,
                     s.name_of_subject AS SubjectName
-					FROM group_of_subjects_subject goss
-					JOIN subject s ON s.subject_id = goss.subject_id
-					WHERE goss.gos_id = @gosId
+					FROM `groups` g
+					JOIN group_of_subjects gos 
+                    ON gos.gos_id = g.gos_id
+					JOIN group_of_subjects_subject goss
+                    ON goss.gos_id = gos.gos_id
+					JOIN subject s
+                    ON s.subject_id = goss.subject_id
+					WHERE g.group_id = @groupId
+					AND s.teacher_id = @teacherId
 					";
 
-					cmd.Parameters.AddWithValue("@gosId", gosId);
+					cmd.Parameters.AddWithValue("@groupId", groupId);
+					cmd.Parameters.AddWithValue("@teacherId", teacherId);
 
 					using (var adapter = new MySqlDataAdapter(cmd))
 					{
@@ -182,10 +189,8 @@ namespace academic_system
 					}
 				}
 			}
-
 			return table;
 		}
-
 	}
 }
 

@@ -45,9 +45,9 @@ namespace academic_system
 		{
 			return gradeRepository.GetByTeacherId(teacherId);
 		}
-		public DataTable GetSubjectsByGroup(int groupId)
+		public DataTable GetSubjectsByGroupAndTeacher(int groupId, int teacherId)
 		{
-			return subjectRepository.GetSubjectsByGroup(groupId);
+			return subjectRepository.GetSubjectsByGroupAndTeacher(groupId, teacherId);
 		}
 
 		public DataTable GetStudentsByGroupId(int groupId)
