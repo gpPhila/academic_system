@@ -31,7 +31,56 @@ namespace academic_system
 
 			txtFirstName.Text = currentStudent.FirstName;
 			txtLastName.Text = currentStudent.LastName;
+			LoadSubjects();
+
+			cmbSubjects.SelectedIndexChanged += cmbSubjects_SelectedIndexChanged;
 		}
+
+		public void LoadSubjects()
+		{
+			DataTable table = manager.GetSubjectsForStudent(currentStudent.GroupId);
+
+			DataRow row = table.NewRow();
+			row["subject_id"] = -1;
+			row["SubjectName"] = "-- Select a subject --";
+			table.Rows.InsertAt(row, 0);
+
+			cmbSubjects.DataSource = table;
+			cmbSubjects.DisplayMember = "SubjectName";
+			cmbSubjects.ValueMember = "subject_id";
+		}
+
+		private void cmbSubjects_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (cmbSubjects.SelectedValue == null)
+				return;
+
+			int subjectId = Convert.ToInt32(cmbSubjects.SelectedValue);
+
+			// ignore "-- Select a subject --"
+			if (subjectId == -1)
+			{
+				dgvGrades.DataSource = null;
+				return;
+			}
+
+			var grades = manager.ViewGradesByStudentAndSubject(
+				currentStudent.StudentId,
+				subjectId
+			);
+
+			dgvGrades.DataSource = grades;
+
+			foreach (DataGridViewColumn col in dgvGrades.Columns)
+			{
+				col.Visible = col.Name == "Value";
+			}
+
+			dgvGrades.Columns["Value"].HeaderText = "Grade";
+			dgvGrades.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+		}
+
+
 		private void LoadGroupName()
 		{
 			var group = manager.GroupRepository.GetById(currentStudent.GroupId);

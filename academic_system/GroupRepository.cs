@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI.Common;
 
 namespace academic_system
 {
@@ -103,6 +104,27 @@ namespace academic_system
 				{
 					cmd.Parameters.AddWithValue("@id", groupId);
 					cmd.ExecuteNonQuery();
+				}
+			}
+		}
+		public int GetGosIdByGroupId(int groupId)
+		{
+			using (var conn = new MySqlConnection(connStr))
+			{
+				conn.Open();
+
+				string sql = "SELECT gos_id FROM `groups` WHERE group_id = @id";
+
+				using (var cmd = new MySqlCommand(sql, conn))
+				{
+					cmd.Parameters.AddWithValue("@id", groupId);
+
+					object result = cmd.ExecuteScalar();
+
+					if (result == null || result == DBNull.Value)
+						throw new Exception("Group has no GOS assigned.");
+
+					return Convert.ToInt32(result);
 				}
 			}
 		}

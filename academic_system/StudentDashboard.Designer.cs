@@ -36,8 +36,9 @@
 			this.txtFirstName = new System.Windows.Forms.TextBox();
 			this.txtLastName = new System.Windows.Forms.TextBox();
 			this.txtGroup = new System.Windows.Forms.TextBox();
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			this.dgvGrades = new System.Windows.Forms.DataGridView();
+			this.cmbSubjects = new System.Windows.Forms.ComboBox();
+			((System.ComponentModel.ISupportInitialize)(this.dgvGrades)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -82,7 +83,7 @@
 			// labelStudentSubjects
 			// 
 			this.labelStudentSubjects.AutoSize = true;
-			this.labelStudentSubjects.Location = new System.Drawing.Point(273, 158);
+			this.labelStudentSubjects.Location = new System.Drawing.Point(270, 158);
 			this.labelStudentSubjects.Name = "labelStudentSubjects";
 			this.labelStudentSubjects.Size = new System.Drawing.Size(88, 25);
 			this.labelStudentSubjects.TabIndex = 4;
@@ -109,22 +110,31 @@
 			this.txtGroup.Size = new System.Drawing.Size(196, 31);
 			this.txtGroup.TabIndex = 7;
 			// 
-			// dataGridView1
+			// dgvGrades
 			// 
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(278, 195);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.RowHeadersWidth = 82;
-			this.dataGridView1.RowTemplate.Height = 33;
-			this.dataGridView1.Size = new System.Drawing.Size(504, 420);
-			this.dataGridView1.TabIndex = 8;
+			this.dgvGrades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvGrades.Location = new System.Drawing.Point(275, 195);
+			this.dgvGrades.Name = "dgvGrades";
+			this.dgvGrades.RowHeadersWidth = 82;
+			this.dgvGrades.RowTemplate.Height = 33;
+			this.dgvGrades.Size = new System.Drawing.Size(504, 346);
+			this.dgvGrades.TabIndex = 8;
+			// 
+			// cmbSubjects
+			// 
+			this.cmbSubjects.FormattingEnabled = true;
+			this.cmbSubjects.Location = new System.Drawing.Point(502, 150);
+			this.cmbSubjects.Name = "cmbSubjects";
+			this.cmbSubjects.Size = new System.Drawing.Size(277, 33);
+			this.cmbSubjects.TabIndex = 9;
 			// 
 			// StudentDashboard
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1081, 649);
-			this.Controls.Add(this.dataGridView1);
+			this.ClientSize = new System.Drawing.Size(1081, 631);
+			this.Controls.Add(this.cmbSubjects);
+			this.Controls.Add(this.dgvGrades);
 			this.Controls.Add(this.txtGroup);
 			this.Controls.Add(this.txtLastName);
 			this.Controls.Add(this.txtFirstName);
@@ -135,7 +145,7 @@
 			this.Controls.Add(this.label1);
 			this.Name = "StudentDashboard";
 			this.Text = "StudentDashboard";
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvGrades)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -151,6 +161,7 @@
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.TextBox txtGroup;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvGrades;
+        private System.Windows.Forms.ComboBox cmbSubjects;
     }
 }

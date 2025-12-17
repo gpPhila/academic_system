@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -19,10 +20,17 @@ namespace academic_system
 		   IGradeRepository gradeRepository,
 		   IGOSSRepository gOSSRepository) : base(userRepository, studentRepository, teacherRepository, groupRepository, subjectRepository, gOSRepository, gradeRepository, gOSSRepository)
 		{ }
-		public List<Grade> ViewGradesByStudent(int studentId)
+		public List<Grade> ViewGradesByStudentAndSubject(int studentId, int subjectId)
 		{
-			return gradeRepository.GetByStudentId(studentId);
+			return gradeRepository.GetByStudentAndSubject(studentId, subjectId);
 		}
+		public DataTable GetSubjectsForStudent(int groupId)
+		{
+			int gosId = groupRepository.GetGosIdByGroupId(groupId);
+			return gOSSRepository.GetByGosIdWithSubjectName(gosId);
+		}
+
+		/*
 		public override List<Student> GetStudentsByGroup(int groupId)
 		{
 			throw new UnauthorizedAccessException("Restriction by role 'Student': cannot get students by group.");
@@ -43,5 +51,6 @@ namespace academic_system
 		{
 			throw new UnauthorizedAccessException("Restriction by role 'Student': cannot get subjects by teacher id.");
 		}
+		*/
 	}
 }

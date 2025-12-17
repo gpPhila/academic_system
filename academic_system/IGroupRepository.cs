@@ -10,5 +10,6 @@ namespace academic_system
     {
         Group GetById(int groupId);
         List<Group> GetAll();
+        int GetGosIdByGroupId(int groupId);
 	}
 }

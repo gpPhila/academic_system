@@ -35,34 +35,35 @@ namespace academic_system
 			}
 			return null;
         }
-		public List<Grade> GetByStudentId(int studentId)
+		public List<Grade> GetByStudentAndSubject(int studentId, int subjectId)
 		{
 			List<Grade> grades = new List<Grade>();
 
 			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
-				string sql = "SELECT * FROM grade WHERE student_id=@id";
+				string sql = "SELECT * FROM grade WHERE student_id=@studentId AND subject_id=@subjectId";
 
-				using (var cmd = new MySqlCommand(sql, conn))
-				{
-					cmd.Parameters.AddWithValue("@id", studentId);
-
-					using (var reader = cmd.ExecuteReader())
+					using (var cmd = new MySqlCommand(sql, conn))
 					{
-						while (reader.Read())
+						cmd.Parameters.AddWithValue("@studentId", studentId);
+						cmd.Parameters.AddWithValue("@subjectId", subjectId);
+
+						using (var reader = cmd.ExecuteReader())
 						{
-							grades.Add(new Grade
+							while (reader.Read())
 							{
-								GradeId = Convert.ToInt32(reader["grade_id"]),
-								StudentId = Convert.ToInt32(reader["student_id"]),
-								SubjectId = Convert.ToInt32(reader["subject_id"]),
-								TeacherId = Convert.ToInt32(reader["teacher_id"]),
-								Value = reader["value"].ToString()
-							});
+								grades.Add(new Grade
+								{
+									GradeId = Convert.ToInt32(reader["grade_id"]),
+									StudentId = Convert.ToInt32(reader["student_id"]),
+									SubjectId = Convert.ToInt32(reader["subject_id"]),
+									TeacherId = Convert.ToInt32(reader["teacher_id"]),
+									Value = reader["value"].ToString()
+								});
+							}
 						}
 					}
-				}
 			}
 			return grades;
 		}
