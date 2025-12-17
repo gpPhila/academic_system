@@ -13,13 +13,13 @@ namespace academic_system
 		private string connStr = "Server=localhost; Database=academic_system; Uid=root; Pwd=;";
 		public Teacher GetById(int teacherId)
 		{
-			using (var conn = new MySqlConnection(connStr)) //connection string
+			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
 				string sql = "SELECT * FROM teacher WHERE teacher_id=@id LIMIT 1";
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
-					cmd.Parameters.AddWithValue("@id", teacherId); //replacement
+					cmd.Parameters.AddWithValue("@id", teacherId);
 					using (var reader = cmd.ExecuteReader())
 					{
 						if (reader.Read())
@@ -39,13 +39,13 @@ namespace academic_system
 		}
 		public Teacher GetByUserId(int userId)
 		{
-			using (var conn = new MySqlConnection(connStr)) //connection string
+			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
 				string sql = "SELECT * FROM teacher WHERE user_id=@id LIMIT 1";
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
-					cmd.Parameters.AddWithValue("@id", userId); //replacement
+					cmd.Parameters.AddWithValue("@id", userId);
 					using (var reader = cmd.ExecuteReader())
 					{
 						if (reader.Read())

@@ -47,11 +47,6 @@ namespace academic_system
 		public IGradeRepository GradeRepository => gradeRepository;
 		public IGOSSRepository GOSSRepository => gOSSRepository;
 
-		public virtual void UpdatePasswordByUser(int userId, string newPassword)
-		{
-			userRepository.UpdatePassword(userId, newPassword);
-		}
-
 		public virtual List<Student> GetStudentsByGroup(int groupId)
 		{
 			return studentRepository.GetByGroupId(groupId);
@@ -70,11 +65,6 @@ namespace academic_system
 		public virtual List <Subject> GetAllSubjects()
 		{
 			return subjectRepository.GetAll();
-		}
-
-		public virtual List<Subject> GetByTeacherId(int teacherId)
-		{
-			return subjectRepository.GetByTeacherId(teacherId);
 		}
 	}
 }

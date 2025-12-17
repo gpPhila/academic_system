@@ -11,8 +11,5 @@ namespace academic_system
         Teacher GetById(int teacherId);
 		Teacher GetByUserId(int userId);
         List<Teacher> GetAll();
-		//void Add (Teacher teacher);
-        //void Update (Teacher teacher);
-        //void Delete (int teacherId);
     }
 }

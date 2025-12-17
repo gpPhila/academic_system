@@ -41,21 +41,10 @@ namespace academic_system
 		{
 			gradeRepository.Delete(gradeId);
 		}
-		public List<Grade> ViewGradesByTeacher(int teacherId)
-		{
-			return gradeRepository.GetByTeacherId(teacherId);
-		}
-		
 		public DataTable GetSubjectsByGroupAndTeacher(int groupId, int teacherId)
 		{
 			return subjectRepository.GetSubjectsByGroupAndTeacher(groupId, teacherId);
 		}
-
-		public DataTable GetStudentsByGroupId(int groupId)
-		{
-			return studentRepository.GetStudentsByGroupId(groupId);
-		}
-
 		public DataTable GetGrades(int studentId, int subjectId, int teacherId)
 		{
 			return gradeRepository.GetGrades(studentId, subjectId, teacherId);

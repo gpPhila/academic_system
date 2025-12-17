@@ -13,13 +13,13 @@ namespace academic_system
 		private string connStr = "Server=localhost; Database=academic_system; Uid=root; Pwd=;";
 		public Student GetById(int studentId)
 		{
-			using (var conn = new MySqlConnection(connStr)) //connection string
+			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
 				string sql = "SELECT * FROM student WHERE student_id=@id LIMIT 1";
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
-					cmd.Parameters.AddWithValue("@id", studentId); //replacement
+					cmd.Parameters.AddWithValue("@id", studentId);
 					using (var reader = cmd.ExecuteReader())
 					{
 						if (reader.Read())
@@ -40,13 +40,13 @@ namespace academic_system
 		}
 		public Student GetByUserId(int userId)
 		{
-			using (var conn = new MySqlConnection(connStr)) //connection string
+			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
 				string sql = "SELECT * FROM student WHERE user_id=@id LIMIT 1";
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
-					cmd.Parameters.AddWithValue("@id", userId); //replacement
+					cmd.Parameters.AddWithValue("@id", userId);
 					using (var reader = cmd.ExecuteReader())
 					{
 						if (reader.Read())
@@ -67,7 +67,7 @@ namespace academic_system
 		}
 		public List<Student> GetByGroupId(int groupId)
 		{
-			List<Student> students = new List<Student>(); //all students belonging to the group in question
+			List<Student> students = new List<Student>();
 
 			using (var conn = new MySqlConnection(connStr))
 			{

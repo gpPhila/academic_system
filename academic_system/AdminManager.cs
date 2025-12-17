@@ -51,10 +51,6 @@ namespace academic_system
 
 			userRepository.Update(user);
 		}
-		public void DeleteUser(int userId)
-		{
-			userRepository.Delete(userId);
-		}
 		public void CreateStudent(int groupId, string firstName, string lastName)
 		{
 			int newUserId = CreateUser(firstName.ToLower(), lastName.ToLower(), "student");
@@ -92,10 +88,6 @@ namespace academic_system
 			studentRepository.Delete(studentId);
 			userRepository.Delete(userId);
 		}
-		public void AssignStudentToGroup(int studentId, int groupId)
-		{
-			studentRepository.AssignStudentToGroup(studentId, groupId);
-		}
 		public void CreateTeacher(string firstName, string lastName)
 		{
 			int newUserId = CreateUser(firstName.ToLower(), lastName.ToLower(), "Teacher");
@@ -125,21 +117,6 @@ namespace academic_system
 		{
 			return teacherRepository.GetById(teacherId);
 		}
-
-		public List<(string DisplayName, int Id)> GetTeachersForDropdown()
-		{
-			var teachers = GetAllTeachers();
-			var result = new List<(string, int)>
-			{
-				("No teacher", 0)
-			};
-
-			result.AddRange(teachers.Select(t =>
-				($"{t.FirstName} {t.LastName}", t.TeacherId)));
-
-			return result;
-		}
-
 		public void DeleteTeacher(int teacherId)
 		{
 			Teacher t = teacherRepository.GetById(teacherId);
@@ -232,10 +209,6 @@ namespace academic_system
 		{
 			gOSSRepository.Delete(gossid);
 		}
-		public List <GOS_Subject> GetGOSSByGosId(int gosId)
-		{
-			return gOSSRepository.GetByGosId(gosId);
-		}
 		public DataTable GetGOSSByGosIdWithSubjectName(int gosId)
 		{
 			return gOSSRepository.GetByGosIdWithSubjectName(gosId);
@@ -271,10 +244,6 @@ namespace academic_system
 		public void DeleteSubject(int subjectId)
 		{
 			subjectRepository.Delete(subjectId);
-		}
-		public void AssignTeacherToSubject(int subjectId, int teacherId)
-		{
-			subjectRepository.AssignTeacherToSubject(subjectId, teacherId);
 		}
 	}
 }

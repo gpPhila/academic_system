@@ -11,13 +11,13 @@ namespace academic_system
 		private string connStr = "Server=localhost; Database=academic_system; Uid=root; Pwd=;";
 		public Subject GetById(int subjectId)
 		{
-			using (var conn = new MySqlConnection(connStr)) //connection string
+			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
 				string sql = "SELECT * FROM subject WHERE subject_id=@id LIMIT 1";
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
-					cmd.Parameters.AddWithValue("@id", subjectId); //replacement
+					cmd.Parameters.AddWithValue("@id", subjectId); 
 					using (var reader = cmd.ExecuteReader())
 					{
 						if (reader.Read())

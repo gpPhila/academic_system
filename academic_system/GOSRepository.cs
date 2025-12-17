@@ -75,23 +75,6 @@ namespace academic_system
 				}
 			}
 		}
-		/*
-		public void AssignSubjectToGroup(int groupId, int subjectId)
-		{
-			using (var conn = new MySqlConnection(connStr))
-			{
-				conn.Open();
-				string sql = "INSERT INTO group_of_subjects (group_id, subject_id) VALUES (@groupId, @subjectId)";
-
-				using (var cmd = new MySqlCommand(sql, conn))
-				{
-					cmd.Parameters.AddWithValue("@groupId", groupId);
-					cmd.Parameters.AddWithValue("@subjectId", subjectId);
-					cmd.ExecuteNonQuery();
-				}
-			}
-		}
-		*/
 		public List<GroupOfSubjects> GetAll()
 		{
 			var result = new List<GroupOfSubjects>();

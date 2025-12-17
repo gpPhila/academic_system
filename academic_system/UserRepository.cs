@@ -13,13 +13,13 @@ namespace academic_system
 
 		public User GetByLogin(string login)
 		{
-			using (var conn = new MySqlConnection(connStr)) //connection string
+			using (var conn = new MySqlConnection(connStr))
 			{
 				conn.Open();
 				string sql = "SELECT * FROM users WHERE login=@login LIMIT 1";
 				using (var cmd = new MySqlCommand(sql, conn))
 				{
-					cmd.Parameters.AddWithValue("@login", login); //replacement
+					cmd.Parameters.AddWithValue("@login", login);
 					using (var reader = cmd.ExecuteReader())
 					{
 						if (reader.Read())

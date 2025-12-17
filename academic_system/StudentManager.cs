@@ -29,28 +29,5 @@ namespace academic_system
 			int gosId = groupRepository.GetGosIdByGroupId(groupId);
 			return gOSSRepository.GetByGosIdWithSubjectName(gosId);
 		}
-
-		/*
-		public override List<Student> GetStudentsByGroup(int groupId)
-		{
-			throw new UnauthorizedAccessException("Restriction by role 'Student': cannot get students by group.");
-		}
-		public override List<Student> GetAllStudents() 
-		{
-			throw new UnauthorizedAccessException("Restriction by role 'Student': cannot get all students.");
-		}
-		public override List<Group> GetAllGroups()
-		{
-			throw new UnauthorizedAccessException("Restriction by role 'Student': cannot get all groups.");
-		}
-		public override List<Subject> GetAllSubjects()
-		{
-			throw new UnauthorizedAccessException("Restriction by role 'Student': cannot get all subjects.");
-		}
-		public override List<Subject> GetByTeacherId(int teacherId)
-		{
-			throw new UnauthorizedAccessException("Restriction by role 'Student': cannot get subjects by teacher id.");
-		}
-		*/
 	}
 }

@@ -126,7 +126,6 @@
     <Compile Include="ISubjectRepository.cs" />
     <Compile Include="ITeacherRepository.cs" />
     <Compile Include="IUserRepository.cs" />
-    <Compile Include="DBConnection.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
