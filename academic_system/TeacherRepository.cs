@@ -8,9 +8,17 @@ using Mysqlx.Crud;
 
 namespace academic_system
 {
-    public class TeacherRepository : ITeacherRepository
+
+	/// <summary>
+	/// Tvarko dėstytojų duomenis duomenų bazėje.
+	/// </summary>
+	public class TeacherRepository : ITeacherRepository
     {
 		private string connStr = "Server=localhost; Database=academic_system; Uid=root; Pwd=;";
+
+		/// <summary>
+		/// Grąžina dėstytoją pagal jo ID.
+		/// </summary>
 		public Teacher GetById(int teacherId)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -37,6 +45,9 @@ namespace academic_system
 			}
 			return null;
 		}
+		/// <summary>
+		/// Grąžina dėstytoją pagal jo naudotojo ID.
+		/// </summary>
 		public Teacher GetByUserId(int userId)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -63,6 +74,9 @@ namespace academic_system
 			}
 			return null;
 		}
+		/// <summary>
+		/// Grąžina visus dėstytojus.
+		/// </summary>
 		public List<Teacher> GetAll()
 		{
 			List<Teacher> teachers = new List<Teacher>();
@@ -91,6 +105,9 @@ namespace academic_system
 			}
 			return teachers;
 		}
+		/// <summary>
+		/// Prideda naują dėstytoją prie duomenų bazės.
+		/// </summary>
 		public void Add(Teacher teacher)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -107,6 +124,9 @@ namespace academic_system
 			}
 		}
 
+		/// <summary>
+		/// Atnaujina dėstytojo duomenis duomenų bazėje.
+		/// </summary>
 		public void Update (Teacher teacher)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -123,6 +143,9 @@ namespace academic_system
 			}
 		}
 
+		/// <summary>
+		/// Ištrina dėstytoją iš duomenų bazės.
+		/// </summary>
 		public void Delete (int teacherId)
 		{
 			using (var conn = new MySqlConnection(connStr))

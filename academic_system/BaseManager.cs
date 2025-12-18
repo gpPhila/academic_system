@@ -8,6 +8,9 @@ using academic_system;
 
 namespace academic_system
 {
+	/// <summary>
+	/// Bazine klasė, iš kurios paveldi kiti valdikliai (manageriai).
+	/// </summary>
 	public class BaseManager
 	{
 		protected readonly IUserRepository userRepository;
@@ -19,6 +22,9 @@ namespace academic_system
 		protected readonly IGradeRepository gradeRepository;
 		protected readonly IGOSSRepository gOSSRepository;
 
+		/// <summary>
+		/// Sukuria BaseManager objektą.
+		/// </summary>
 		public BaseManager(
 			IUserRepository userRepository,
 			IStudentRepository studentRepository,
@@ -47,21 +53,30 @@ namespace academic_system
 		public IGradeRepository GradeRepository => gradeRepository;
 		public IGOSSRepository GOSSRepository => gOSSRepository;
 
+		/// <summary>
+		/// Gauna studentų sąrašą pagal studentų grupės ID.
+		/// </summary>
 		public virtual List<Student> GetStudentsByGroup(int groupId)
 		{
 			return studentRepository.GetByGroupId(groupId);
 		}
-
+		/// <summary>
+		/// Gauna studentų sąrašą.
+		/// </summary>
 		public virtual List<Student> GetAllStudents()
 		{
 			return studentRepository.GetAll();
 		}
-
+		/// <summary>
+		/// Gauna studentų grupių sąrašą.
+		/// </summary>
 		public virtual List <Group> GetAllGroups()
 		{
 			return groupRepository.GetAll();
 		}
-
+		/// <summary>
+		/// Gauna dalykų sąrašą.
+		/// </summary>
 		public virtual List <Subject> GetAllSubjects()
 		{
 			return subjectRepository.GetAll();

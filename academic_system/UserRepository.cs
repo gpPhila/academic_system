@@ -7,10 +7,17 @@ using MySql.Data.MySqlClient;
 
 namespace academic_system
 {
+
+	/// <summary>
+	/// Tvarko naudotojų duomenis duomenų bazėje.
+	/// </summary>
 	public class UserRepository : IUserRepository
 	{
 		private string connStr = "Server=localhost; Database=academic_system; Uid=root; Pwd=;";
 
+		/// <summary>
+		/// Grąžina naudotoją pagal prisijungimo vardą (login).
+		/// </summary>
 		public User GetByLogin(string login)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -38,7 +45,10 @@ namespace academic_system
 			return null;
 		}
 
-	 public void Add(User user)
+		/// <summary>
+		/// Prideda naują naudotoją prie duomenų bazės.
+		/// </summary>
+		public void Add(User user)
 		{
 			using (var conn = new MySqlConnection(connStr))
 			{
@@ -54,6 +64,9 @@ namespace academic_system
 			}
 		}
 
+		/// <summary>
+		/// Atnaujina naudotojo duomenis duomenų bazėje.
+		/// </summary>
 		public void Update(User user)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -71,6 +84,9 @@ namespace academic_system
 			}
 		}
 
+		/// <summary>
+		/// Ištrina naudotoją iš duomenų bazės.
+		/// </summary>
 		public void Delete(int userId)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -84,6 +100,10 @@ namespace academic_system
 				}
 			}
 		}
+
+		/// <summary>
+		/// Atnaujina naudotojo slaptažodį.
+		/// </summary>
 		public void UpdatePassword(int userId, string newPassword)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -98,6 +118,10 @@ namespace academic_system
 				}
 			}
 		}
+
+		/// <summary>
+		/// Grąžina visus naudotojus.
+		/// </summary>
 		public List <User> GetAll()
 		{
 			List<User> users = new List<User>();

@@ -5,9 +5,17 @@ using MySql.Data.MySqlClient;
 
 namespace academic_system
 {
-    public class GradeRepository : IGradeRepository
+
+	/// <summary>
+	/// Tvarko pažymių duomenis duomenų bazėje.
+	/// </summary>
+	public class GradeRepository : IGradeRepository
     {
 		private string connStr = "Server=localhost; Database=academic_system; Uid=root; Pwd=;";
+
+		/// <summary>
+		/// Grąžina pažymį pagal jo ID.
+		/// </summary>
 		public Grade GetById(int gradeId)
         {
 			using (var conn = new MySqlConnection(connStr)) //connection string
@@ -35,6 +43,10 @@ namespace academic_system
 			}
 			return null;
         }
+
+		/// <summary>
+		/// Grąžina pažymius pagal studentą ir dalyką.
+		/// </summary>
 		public List<Grade> GetByStudentAndSubject(int studentId, int subjectId)
 		{
 			List<Grade> grades = new List<Grade>();
@@ -67,6 +79,10 @@ namespace academic_system
 			}
 			return grades;
 		}
+
+		/// <summary>
+		/// Grąžina pažymius pagal dėstytoją.
+		/// </summary>
 		public List<Grade> GetByTeacherId(int teacherId)
 		{
 			List<Grade> grades = new List<Grade>();
@@ -98,6 +114,10 @@ namespace academic_system
 			}
 			return grades;
 		}
+
+		/// <summary>
+		/// Prideda naują pažymį prie duomenų bazės.
+		/// </summary>
 		public void Add(Grade grade)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -114,6 +134,10 @@ namespace academic_system
 				}
 			}
 		}
+
+		/// <summary>
+		/// Atnaujina pažymio duomenis duomenų bazėje.
+		/// </summary>
 		public void Update(Grade grade)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -131,6 +155,10 @@ namespace academic_system
 				}
 			}
 		}
+
+		/// <summary>
+		/// Ištrina pažymį iš duomenų bazės.
+		/// </summary>
 		public void Delete(int gradeId)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -144,6 +172,10 @@ namespace academic_system
 				}
 			}
 		}
+
+		/// <summary>
+		/// Atnaujina pažymio vertę duomenų bazėje.
+		/// </summary>
 		public void UpdateValue(int gradeId, string newValue)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -158,6 +190,10 @@ namespace academic_system
 				}
 			}
 		}
+
+		/// <summary>
+		/// Grąžina pažymių sąrašą lentelės formatu.
+		/// </summary>
 		public DataTable GetGrades(int studentId, int subjectId, int teacherId)
 		{
 			var table = new DataTable();

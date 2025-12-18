@@ -8,9 +8,17 @@ using MySql.Data.MySqlClient;
 
 namespace academic_system
 {
+
+	/// <summary>
+	/// Tvarko studentų duomenis duomenų bazėje.
+	/// </summary>
 	public class StudentRepository : IStudentRepository
 	{
 		private string connStr = "Server=localhost; Database=academic_system; Uid=root; Pwd=;";
+
+		/// <summary>
+		/// Grąžina studentą pagal studento ID.
+		/// </summary>
 		public Student GetById(int studentId)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -38,6 +46,10 @@ namespace academic_system
 			}
 			return null;
 		}
+
+		/// <summary>
+		/// Grąžina studentą pagal naudotojo ID.
+		/// </summary>
 		public Student GetByUserId(int userId)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -65,6 +77,10 @@ namespace academic_system
 			}
 			return null;
 		}
+
+		/// <summary>
+		/// Grąžina visus studentus pagal grupės ID.
+		/// </summary>
 		public List<Student> GetByGroupId(int groupId)
 		{
 			List<Student> students = new List<Student>();
@@ -98,6 +114,9 @@ namespace academic_system
 			return students;
 		}
 
+		/// <summary>
+		/// Grąžina visus studentus.
+		/// </summary>
 		public List<Student> GetAll()
 		{
 			List<Student> students = new List<Student>();
@@ -127,6 +146,10 @@ namespace academic_system
 			}
 			return students;
 		}
+
+		/// <summary>
+		/// Prideda naują studentą į duomenų bazę.
+		/// </summary>
 		public void Add(Student student)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -143,6 +166,10 @@ namespace academic_system
 				}
 			}
 		}
+
+		/// <summary>
+		/// Atnaujina studento duomenis duomenų bazėje.
+		/// </summary>
 		public void Update(Student student)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -159,6 +186,9 @@ namespace academic_system
 				}
 			}
 		}
+		/// <summary>
+		/// Ištrina studentą iš duomenų bazės.
+		/// </summary>
 		public void Delete(int studentId)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -172,6 +202,10 @@ namespace academic_system
 				}
 			}
 		}
+
+		/// <summary>
+		/// Priskiria studentą prie grupės.
+		/// </summary>
 		public void AssignStudentToGroup(int studentId, int groupId)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -188,6 +222,9 @@ namespace academic_system
 			}
 		}
 
+		/// <summary>
+		/// Grąžina studentų sąrašą pagal grupę lentelės formatu.
+		/// </summary>
 		public DataTable GetStudentsByGroupId(int groupId)
 		{
 			var table = new DataTable();

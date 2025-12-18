@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "D:\\coding\\academic_system\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\gosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\gosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\gossrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\gossrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|D:\\coding\\academic_system\\academic_system\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\teacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\teacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\subjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\subjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\grouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\grouprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\graderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\graderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +47,105 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GOSRepository.cs",
+              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\GOSRepository.cs",
+              "RelativeDocumentMoniker": "academic_system\\GOSRepository.cs",
+              "ToolTip": "D:\\coding\\academic_system\\academic_system\\GOSRepository.cs",
+              "RelativeToolTip": "academic_system\\GOSRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T16:35:51.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GOSSRepository.cs",
+              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\GOSSRepository.cs",
+              "RelativeDocumentMoniker": "academic_system\\GOSSRepository.cs",
+              "ToolTip": "D:\\coding\\academic_system\\academic_system\\GOSSRepository.cs",
+              "RelativeToolTip": "academic_system\\GOSSRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T16:21:20.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GradeRepository.cs",
+              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\GradeRepository.cs",
+              "RelativeDocumentMoniker": "academic_system\\GradeRepository.cs",
+              "ToolTip": "D:\\coding\\academic_system\\academic_system\\GradeRepository.cs",
+              "RelativeToolTip": "academic_system\\GradeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T16:14:52.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GroupRepository.cs",
+              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\GroupRepository.cs",
+              "RelativeDocumentMoniker": "academic_system\\GroupRepository.cs",
+              "ToolTip": "D:\\coding\\academic_system\\academic_system\\GroupRepository.cs",
+              "RelativeToolTip": "academic_system\\GroupRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T16:11:02.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SubjectRepository.cs",
+              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\SubjectRepository.cs",
+              "RelativeDocumentMoniker": "academic_system\\SubjectRepository.cs",
+              "ToolTip": "D:\\coding\\academic_system\\academic_system\\SubjectRepository.cs",
+              "RelativeToolTip": "academic_system\\SubjectRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T16:06:02.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "TeacherRepository.cs",
               "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\TeacherRepository.cs",
               "RelativeDocumentMoniker": "academic_system\\TeacherRepository.cs",
               "ToolTip": "D:\\coding\\academic_system\\academic_system\\TeacherRepository.cs",
               "RelativeToolTip": "academic_system\\TeacherRepository.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAqwC8AAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T22:39:50.994Z",
+              "WhenOpened": "2025-12-18T16:03:14.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\UserRepository.cs",
+              "RelativeDocumentMoniker": "academic_system\\UserRepository.cs",
+              "ToolTip": "D:\\coding\\academic_system\\academic_system\\UserRepository.cs",
+              "RelativeToolTip": "academic_system\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T15:54:27.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StudentRepository.cs",
+              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\StudentRepository.cs",
+              "RelativeDocumentMoniker": "academic_system\\StudentRepository.cs",
+              "ToolTip": "D:\\coding\\academic_system\\academic_system\\StudentRepository.cs",
+              "RelativeToolTip": "academic_system\\StudentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T23:03:29.92Z",
               "EditorCaption": ""
             }
           ]

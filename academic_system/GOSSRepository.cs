@@ -8,9 +8,16 @@ using MySql.Data.MySqlClient;
 
 namespace academic_system
 {
+	/// <summary>
+	/// Tvarko už ryšį tarp dalykų grupių ir dalykų (junction repository).
+	/// </summary>
 	public class GOSSRepository : IGOSSRepository
 	{
 		private string connStr = "Server=localhost; Database=academic_system; Uid=root; Pwd=;";
+
+		/// <summary>
+		/// Grąžina dalykų grupės ir dalyko ryšio įrašą pagal jo ID.
+		/// </summary>
 		public GOS_Subject GetById(int gossId)
 		{
 			using (var conn = new MySqlConnection(connStr)) //connection string
@@ -37,6 +44,9 @@ namespace academic_system
 			return null;
 		}
 
+		/// <summary>
+		/// Prideda naują ryšį tarp dalykų grupės ir dalyko.
+		/// </summary>
 		public void Add(GOS_Subject goss)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -51,6 +61,10 @@ namespace academic_system
 				}
 			}
 		}
+
+		/// <summary>
+		/// Atnaujina ryšio tarp dalykų grupės ir dalyko duomenis.
+		/// </summary>
 		public void Update(GOS_Subject goss)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -66,6 +80,10 @@ namespace academic_system
 				}
 			}
 		}
+
+		/// <summary>
+		/// Ištrina ryšį tarp dalykų grupės ir dalyko.
+		/// </summary>
 		public void Delete(int GOSSId)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -79,6 +97,10 @@ namespace academic_system
 				}
 			}
 		}
+
+		/// <summary>
+		/// Grąžina visus ryšius tarp dalykų grupės ir dalyko.
+		/// </summary>
 		public List<GOS_Subject> GetAll()
 		{
 			var result = new List<GOS_Subject>();
@@ -107,6 +129,10 @@ namespace academic_system
 
 			return result;
 		}
+
+		/// <summary>
+		/// Grąžina visus ryšius pagal dalykų grupės ID.
+		/// </summary>
 		public List<GOS_Subject> GetByGosId(int gosId)
 		{
 			var result = new List<GOS_Subject>();
@@ -133,6 +159,10 @@ namespace academic_system
 			return result;
 			}
 		}
+
+		/// <summary>
+		/// Grąžina dalykų pavadinimus, kurie priklauso tam tikrai dalykų grupei.
+		/// </summary>
 		public DataTable GetByGosIdWithSubjectName(int gosId)
 		{
 			var table = new DataTable();

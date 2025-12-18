@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\coding\\academic_system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\teacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\teacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|d:\\coding\\academic_system\\academic_system\\adminmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\adminmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|D:\\coding\\academic_system\\academic_system\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B53736C4-595D-4D92-ABA9-39C9CC9BDA8D}|academic_system\\academic_system.csproj|solutionrelative:academic_system\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TeacherRepository.cs",
-              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\TeacherRepository.cs",
-              "RelativeDocumentMoniker": "academic_system\\TeacherRepository.cs",
-              "ToolTip": "D:\\coding\\academic_system\\academic_system\\TeacherRepository.cs",
-              "RelativeToolTip": "academic_system\\TeacherRepository.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAqwC8AAAAwAAAAAAAAAA==",
+              "Title": "AdminManager.cs",
+              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\AdminManager.cs",
+              "RelativeDocumentMoniker": "academic_system\\AdminManager.cs",
+              "ToolTip": "D:\\coding\\academic_system\\academic_system\\AdminManager.cs",
+              "RelativeToolTip": "academic_system\\AdminManager.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAAEEAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T22:39:50.994Z",
+              "WhenOpened": "2025-12-17T23:04:53.37Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentRepository.cs",
+              "DocumentMoniker": "D:\\coding\\academic_system\\academic_system\\StudentRepository.cs",
+              "RelativeDocumentMoniker": "academic_system\\StudentRepository.cs",
+              "ToolTip": "D:\\coding\\academic_system\\academic_system\\StudentRepository.cs",
+              "RelativeToolTip": "academic_system\\StudentRepository.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAAAJAAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T23:03:29.92Z"
             }
           ]
         }

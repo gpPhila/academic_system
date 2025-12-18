@@ -6,9 +6,17 @@ using MySql.Data.MySqlClient;
 
 namespace academic_system
 {
+
+	/// <summary>
+	/// Tvarko dalykų duomenis duomenų bazėje.
+	/// </summary>
 	public class SubjectRepository : ISubjectRepository
 	{
 		private string connStr = "Server=localhost; Database=academic_system; Uid=root; Pwd=;";
+
+		/// <summary>
+		/// Grąžina dalyką pagal jo ID.
+		/// </summary>
 		public Subject GetById(int subjectId)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -36,6 +44,9 @@ namespace academic_system
 			return null;
 		}
 
+		/// <summary>
+		/// Grąžina visus dalykus.
+		/// </summary>
 		public List<Subject> GetAll()
 		{
 			List <Subject> subjects = new List <Subject> ();
@@ -64,6 +75,10 @@ namespace academic_system
 			}
 		return subjects;
  		}
+
+		/// <summary>
+		/// Grąžina visus dalykus pagal dėstytojo ID.
+		/// </summary>
 		public List<Subject> GetByTeacherId(int teacherId)
 		{
 			List<Subject> subjects = new List<Subject>();
@@ -94,6 +109,10 @@ namespace academic_system
 			}
 			return subjects;
 		}
+
+		/// <summary>
+		/// Prideda naują dalyką prie duomenų bazės.
+		/// </summary>
 		public void Add(Subject subject)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -109,6 +128,10 @@ namespace academic_system
 				}
 			}
 		}
+
+		/// <summary>
+		/// Atnaujina dalyko duomenis duomenų bazėje.
+		/// </summary>
 		public void Update(Subject subject)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -125,6 +148,10 @@ namespace academic_system
 				}
 			}
 		}
+
+		/// <summary>
+		/// Ištrina dalyką iš duomenų bazės.
+		/// </summary>
 		public void Delete(int subjectId)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -138,6 +165,10 @@ namespace academic_system
 				}
 			}
 		}
+
+		/// <summary>
+		/// Priskiria dėstytoją prie dalyko.
+		/// </summary>
 		public void AssignTeacherToSubject(int subjectId, int teacherId)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -154,6 +185,9 @@ namespace academic_system
 			}
 		}
 
+		/// <summary>
+		/// Grąžina dalykus pagal studentų grupės ID ir dėstytojo ID lentelės formatu.
+		/// </summary>
 		public DataTable GetSubjectsByGroupAndTeacher(int groupId, int teacherId)
 		{
 			var table = new DataTable();

@@ -5,9 +5,17 @@ using MySqlX.XDevAPI.Common;
 
 namespace academic_system
 {
-    public class GroupRepository : IGroupRepository
+
+	/// <summary>
+	/// Tvarko studentų grupių duomenis duomenų bazėje.
+	/// </summary>
+	public class GroupRepository : IGroupRepository
     {
 		private string connStr = "Server=localhost; Database=academic_system; Uid=root; Pwd=;";
+
+		/// <summary>
+		/// Grąžina studentų grupę pagal jos ID.
+		/// </summary>
 		public Group GetById(int groupId)
 		{
 			using (var conn = new MySqlConnection(connStr)) //connection string
@@ -34,6 +42,10 @@ namespace academic_system
 			}
 			return null;
 		}
+
+		/// <summary>
+		/// Grąžina visas studentų grupes.
+		/// </summary>
 		public List<Group> GetAll()
 		{
 			List<Group> groups = new List<Group>();
@@ -62,6 +74,10 @@ namespace academic_system
 			}
 			return groups;
 		}
+
+		/// <summary>
+		/// Prideda naują studentų grupę prie duomenų bazės.
+		/// </summary>
 		public void Add(Group group)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -77,6 +93,10 @@ namespace academic_system
 				}
 			}
 		}
+
+		/// <summary>
+		/// Atnaujina studentų grupės duomenis duomenų bazėje.
+		/// </summary>
 		public void Update(Group group)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -94,6 +114,10 @@ namespace academic_system
 				}
 			}
 		}
+
+		/// <summary>
+		/// Ištrina studentų grupę iš duomenų bazės.
+		/// </summary>
 		public void Delete(int groupId)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -107,6 +131,10 @@ namespace academic_system
 				}
 			}
 		}
+
+		/// <summary>
+		/// Grąžina dalykų grupės ID pagal studentų grupės ID.
+		/// </summary>
 		public int GetGosIdByGroupId(int groupId)
 		{
 			using (var conn = new MySqlConnection(connStr))

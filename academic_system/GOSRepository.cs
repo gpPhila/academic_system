@@ -7,9 +7,17 @@ using MySql.Data.MySqlClient;
 
 namespace academic_system
 {
+
+	/// <summary>
+	/// Tvarko dalykų grupių duomenis duomenų bazėje.
+	/// </summary>
 	public class GOSRepository : IGOSRepository
 	{
 		private string connStr = "Server=localhost; Database=academic_system; Uid=root; Pwd=;";
+
+		/// <summary>
+		/// Grąžina dalykų grupę pagal jos ID.
+		/// </summary>
 		public GroupOfSubjects GetById(int gosId)
 		{
 			using (var conn = new MySqlConnection(connStr)) //connection string
@@ -35,6 +43,9 @@ namespace academic_system
 			return null;
 		}
 
+		/// <summary>
+		/// Prideda naują dalykų grupę prie duomenų bazės.
+		/// </summary>
 		public void Add(GroupOfSubjects gos)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -48,6 +59,10 @@ namespace academic_system
 				}
 			}
 		}
+
+		/// <summary>
+		/// Atnaujina dalykų grupės duomenis duomenų bazėje.
+		/// </summary>
 		public void Update(GroupOfSubjects gos)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -62,6 +77,10 @@ namespace academic_system
 				}
 			}
 		}
+
+		/// <summary>
+		/// Ištrina dalykų grupę iš duomenų bazės.
+		/// </summary>
 		public void Delete(int GOSId)
 		{
 			using (var conn = new MySqlConnection(connStr))
@@ -75,6 +94,10 @@ namespace academic_system
 				}
 			}
 		}
+
+		/// <summary>
+		/// Grąžina visas dalykų grupes.
+		/// </summary>
 		public List<GroupOfSubjects> GetAll()
 		{
 			var result = new List<GroupOfSubjects>();
